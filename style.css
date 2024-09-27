@@ -1,0 +1,188 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+/* Centered main content */
+.content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Large headline style */
+h1 {
+    font-size: 6rem; /* Increased font size */
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+
+/* Corner containers */
+.corner {
+    position: absolute;
+    width: 130px; /* Width of the corner containers */
+    height: 50px; /* Height of the corner containers */
+    display: flex;
+    /*background-color: #f0f0f0; /* Background color */
+    /*border: 1px solid #0d0c0c; /* Border for visibility */
+    text-align: center; /* Center the text */
+    font-size: 1.2rem; /* Font size */
+}
+
+/* Positioning and rotation for corner containers */
+.top-left {
+    top: 150px;
+    left: 20px;
+    transform: rotate(270deg); 
+    transform-origin: top left; /* Set the origin of the rotation */
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+    transform-origin: bottom left; /* Set the origin of the rotation */
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.bottom-right {
+    bottom: -30px;
+    right: -50px;
+    transform: rotate(270deg);
+    transform-origin: top left; /* Set the origin of the rotation */
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+/* Default link style */
+a {
+    color: inherit; /* Use the parent element's text color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    font-style: italic;
+}
+
+/* Styles 1 */
+.link-style-1 {
+    color: #bbc259;
+}
+
+.link-style-1:hover {
+    font-weight: italic;
+}
+
+/* Style 2 */
+.link-style-2 {
+    color: inherit; 
+}
+
+.link-style-2:hover {
+    text-decoration: none;
+}
+/* Button styles */
+button {
+    font-size: 1.2rem; /* Font size for button text */
+    color: #bbc259; /* Text color */
+    font-family: 'Playfair Display', serif;
+    background: none; /* Removes the default background */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes cursor to pointer */
+    margin-left: 5px; /* Adds space between 'Go' and 'Back' */
+    transition: font-style 0.3s ease; /* Smooth hover transition */
+}
+
+/* Button hover effect italic */
+button:hover {
+    font-style: italic; /* Italic text on hover */
+}
+
+.styled-list {
+    list-style-type: none;        /* Removes bullet points */
+    padding-left: 0;              /* No left padding since bullets are removed */
+    margin: 0;
+}
+
+.styled-list li {
+    padding: 15px 30px;           /* Increases padding for a wider look */
+    margin: 15px 0;               /* Adds more vertical spacing between items */
+    background-color: #f0f0f0;    /* Light background color for a clean look */
+    border-left: 6px solid #bbc259; /* Adds a wider left border for a modern look */
+    border-radius: 6px;           /* Slightly more rounded corners */
+    font-size: 1.2rem;            /* Larger font size for better readability */
+    transition: background-color 0.3s ease; /* Smooth background change */
+    text-align: left;             /* Ensures text is left-aligned */
+    width: 100%;                   /* Makes the list item wider */
+    margin-left: auto;            /* Centers the list */
+    margin-right: auto;           /* Centers the list */
+}
+
+/* Hover effect 
+.styled-list li:hover {
+    background-color: #bbc259; 
+    color: white; 
+}*/
+
+/* Button styles */
+.language-button {
+    color: #bbc259; /* Standard color for inactive languages */
+    background: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor pointer on hover */
+    font-size: 1.2rem; /* Font size */
+    margin: 0 5px; /* Spacing between buttons */
+}
+
+/* Active language style */
+.language-button.active {
+    color: black; /* Active language in black */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    .corner {
+        width: 100px; /* Adjust width for smaller screens */
+        height: 70px; /* Adjust height for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
