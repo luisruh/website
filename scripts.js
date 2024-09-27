@@ -8,9 +8,10 @@ const translations = {
         about_header: "Wer ich bin",
         about_content: "Ich bin Luis.",
         work_header: "Meine Arbeit",
-        work_content: "<ul class='styled-list'><li>Bachelorarbeit</li><li>Masterarbeit</li><li>Power BI Expertise</li></ul>",
+        work_content: "<ul class='styled-list'><li>Bachelorarbeit</li><li>Masterarbeit</li><li>Power BI Expertise</li><li>und keine Ahnung was noch</li></ul>",
         politics_header: "Ideen über Politik",
-        politics_content: "<ul class='styled-list'><li>Schwarze Null</li><li>Sozialleistungen</li><li>Umweltschutz</li></ul>"
+        politics_content:  "<ul class='styled-list'><li>In</li><li>Bearbeitung</li></ul>", // Schwarze Null, Sozialleistungen, Umweltschutz
+        disclaimer: "Falls du dich hierher verirrt hast, ich übe nur ein bisschen website bauen."
     },
     en: {
         main_intro_sentence: [
@@ -21,9 +22,10 @@ const translations = {
         about_header: "Who I am",
         about_content: "I am Luis.",
         work_header: "My Work",
-        work_content: "<ul class='styled-list'>li>Bachelor Thesis</li><li>Master Thesis</li><li>Power BI Expertise</li></ul>",
+        work_content: "<ul class='styled-list'><li>Bachelor Thesis</li><li>Master Thesis</li><li>Power BI Expertise</li><li>and no idea what else</li></ul>",
         politics_header: "Ideas about Politics",
-        politics_content: "<ul class='styled-list'><li>Balanced Budget</li><li>Social Benefits</li><li>Environmental Protection</li></ul>"
+        politics_content: "<ul class='styled-list'><li>Work</li><li>In</li><li>Progress</li></ul>",
+        disclaimer: "★ If you ended up here by mistake, I am just practicing building websites."
     },
 };
 
@@ -35,6 +37,8 @@ function setLanguage(lang) {
     const workContentElement = document.getElementById('work_content');
     const politicsHeaderElement = document.getElementById('politics_header');
     const politicsContentElement = document.getElementById('politics_content');
+    const disclaimerElement = document.getElementById('disclaimer'); // For the star disclaimer
+
 
     // Check if mainIntroElement exists and update
     if (mainIntroElement) {
@@ -71,6 +75,11 @@ function setLanguage(lang) {
         politicsContentElement.innerHTML = translations[lang].politics_content;
     }
 
+    // Update the star disclaimer if it exists
+    if (disclaimerElement) {
+        disclaimerElement.innerHTML = translations[lang].disclaimer;
+    }
+
     // Update button styles after setting the language
     updateButtonStyles(lang);
 
@@ -94,14 +103,14 @@ function loadLanguage() {
     // Check if a language is saved in local storage
     const savedLanguage = localStorage.getItem('selectedLanguage');
     const defaultLanguage = 'de'; // Default to German if no language is saved
-
+  
     // If there's a saved language, use it; otherwise, use the default language
     const languageToSet = savedLanguage || defaultLanguage;
-    setLanguage(languageToSet);
-
+    setLanguage(languageToSet); // Pass the retrieved language
+  
     // Update button styles after setting the language
-    updateButtonStyles(lang);
-}
+    updateButtonStyles(languageToSet); // Pass the retrieved language
+  }
 
 function loadContent(file, elementId) {
     fetch(file)
