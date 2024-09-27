@@ -193,15 +193,15 @@ button:hover {
     left: 25%;
     transform: translate(-50%, -50%); /* Center the star */
     z-index: 1000;
-    width: 25vw; /* Responsive width based on viewport width */
-    height: 25vw; /* Responsive height based on viewport width */
+    width: 35vw; /* Responsive width based on viewport width */
+    height: 35vw; /* Responsive height based on viewport width */
     background-color: #951717;
-    padding-top: 9%; /* Adjust padding to ensure content is centered */
+    padding-top: 15%; /* Adjust padding to ensure content is centered */
     padding-left: 6%; 
     padding-right: 6%;
     text-align: center;
     color: white;
-    font-size: 1.5vw; /* Responsive font size */
+    font-size: 2vw; /* Responsive font size */
     clip-path: polygon(
       50% 0%,
       61% 35%,
