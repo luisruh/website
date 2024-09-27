@@ -25,7 +25,7 @@ const translations = {
         work_content: "<ul class='styled-list'><li>Bachelor Thesis</li><li>Master Thesis</li><li>Power BI Expertise</li><li>and no idea what else</li></ul>",
         politics_header: "Ideas about Politics",
         politics_content: "<ul class='styled-list'><li>Work</li><li>In</li><li>Progress</li></ul>",
-        disclaimer: "★ If you ended up here by mistake, I am just practicing building websites."
+        disclaimer: "If you ended up here by mistake, I am just practicing building websites."
     },
 };
 
