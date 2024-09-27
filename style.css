@@ -196,9 +196,9 @@ button:hover {
     width: 35vw; /* Responsive width based on viewport width */
     height: 35vw; /* Responsive height based on viewport width */
     background-color: #951717;
-    padding-top: 15%; /* Adjust padding to ensure content is centered */
-    padding-left: 20%; 
-    padding-right: 20%;
+    padding-top: 14%; /* Adjust padding to ensure content is centered */
+    padding-left: 9%; 
+    padding-right: 9%;
     text-align: center;
     color: white;
     font-size: 2vw; /* Responsive font size */
