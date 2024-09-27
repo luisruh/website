@@ -186,3 +186,35 @@ button:hover {
         font-size: 1rem; /* Adjust font size for smaller screens */
     }
 }
+
+.star {
+    position: absolute;
+    top: 13%;
+    left: 25%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 400px;
+    height: 400px;
+    background-color: #951717;
+    padding-top: 160px;
+    padding-left: 90px;
+    padding-right: 90px;
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      75% 57%,
+      86% 91%,
+      50% 75%,
+      14% 91%,
+      25% 57%,
+      2% 35%,
+      39% 35%
+    );
+    white-space: normal; /* Allow normal text wrapping */
+    line-height: 1.5; /* Center text vertically */
+    box-shadow: 500px 500px 100px rgba(0, 0, 0, 1); /* A darker, simpler shadow */
+}
