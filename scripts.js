@@ -11,7 +11,7 @@ const translations = {
         work_content: "<ul class='styled-list'><li>Bachelorarbeit</li><li>Masterarbeit</li><li>Power BI Expertise</li><li>und keine Ahnung was noch</li></ul>",
         politics_header: "Ideen über Politik",
         politics_content:  "<ul class='styled-list'><li>In</li><li>Bearbeitung</li></ul>", // Schwarze Null, Sozialleistungen, Umweltschutz
-        disclaimer: "Falls du dich hierher verirrt hast, ich übe nur ein bisschen website bauen."
+        disclaimer: "Ich übe nur ein bisschen Website bauen :) "
     },
     en: {
         main_intro_sentence: [
