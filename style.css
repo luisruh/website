@@ -216,7 +216,7 @@ button:hover {
 }
 @media (max-height: 32rem) {
     .container {
-        height: 80vh; /* Reduces the height of the main container to 85% of the viewport height */
+        height: 70vh; /* Reduces the height of the main container to 85% of the viewport height */
         margin-top: 20vh; /* Pushes the main content down to make space for the fixed banner */
 
     }
