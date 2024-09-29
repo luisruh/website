@@ -17,7 +17,7 @@
 }
 
 html, body {
-    height: 100%;
+    height: auto;
     font-family: 'Playfair Display', serif;
     background-color: var(--color-background);
     color: var(--color-text);
@@ -31,11 +31,11 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 90vh;
     padding: 1.25rem;
     position: relative;
     /* overflow: hidden; */
-    margin-top: calc(1.2rem + 2vh);
+    margin-top: 10vh;
 }
 
 .content {
@@ -209,15 +209,15 @@ button:hover {
     z-index: 1000;
     box-shadow: 0 2px 5px var(--color-shadow); /* Optional shadow */
 }
-@media (max-height: 24rem) or (max-width: 48rem) {
+@media (max-height: 32rem) or (max-width: 52rem) {
     h1 {
         font-size: 3rem; /* Reduces font size for smaller screens */
     }
 }
 @media (max-height: 32rem) {
     .container {
-        height: 75vh; /* Reduces the height of the main container to 85% of the viewport height */
-        margin-top: calc(1.2rem + 4vh); /* Pushes the main content down to make space for the fixed banner */
+        height: 80vh; /* Reduces the height of the main container to 85% of the viewport height */
+        margin-top: 20vh; /* Pushes the main content down to make space for the fixed banner */
 
     }
 
