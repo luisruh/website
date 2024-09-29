@@ -21,7 +21,7 @@ html, body {
     font-family: 'Playfair Display', serif;
     background-color: var(--color-background);
     color: var(--color-text);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -34,7 +34,7 @@ html, body {
     height: 95vh;
     padding: 1.25rem;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-top: 5vh;
 }
 
@@ -216,8 +216,8 @@ button:hover {
 }
 @media (max-height: 32rem) {
     .container {
-        height: 70vh; /* Reduces the height of the main container to 85% of the viewport height */
-        margin-top: 20vh; /* Pushes the main content down to make space for the fixed banner */
+        height: 75vh; /* Reduces the height of the main container to 85% of the viewport height */
+        margin-top: 10vh; /* Pushes the main content down to make space for the fixed banner */
 
     }
 
