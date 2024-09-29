@@ -197,18 +197,18 @@ button:hover {
 
 /* Top banner styling */
 .top-banner {
-    position: fixed; /* Stays at the top */
-    width: 100%; /* Full width */
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: var(--color-banner-bg);
     color: var(--color-text);
     text-align: center;
-    padding: 1vh 0; /* Padding to allow it to expand */
+    padding: 1vh 0;
     font-size: 1.2rem;
     font-weight: bold;
-    z-index: 1000; /* Keeps banner on top */
-    box-shadow: 0 2px 5px var(--color-shadow); /* Subtle shadow */
+    z-index: 1000;
+    box-shadow: 0 2px 5px var(--color-shadow); /* Optional shadow */
 }
-
 @media (max-height: 24rem) or (max-width: 48rem) {
     h1 {
         font-size: 3rem; /* Reduces font size for smaller screens */
