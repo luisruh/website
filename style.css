@@ -17,11 +17,11 @@
 }
 
 html, body {
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     font-family: 'Playfair Display', serif;
     background-color: var(--color-background);
     color: var(--color-text);
-    /* overflow: hidden; */
 }
 
 
@@ -36,7 +36,12 @@ html, body {
     position: relative;
     /* overflow: hidden; */
     margin-top: 5vh;
-}
+    height: auto;
+    min-height: 85vh;
+    margin-top: 5vh;
+    position: relative;
+    overflow: auto;
+    }
 
 .content {
     text-align: center;
@@ -214,11 +219,10 @@ button:hover {
         font-size: 3rem; /* Reduces font size for smaller screens */
     }
 }
-@media (max-height: 32rem) {
+@media (max-height: 24rem) or (max-width: 48rem) {
     .container {
-        height: 75vh; /* Reduces the height of the main container to 85% of the viewport height */
-        margin-top: 10vh; /* Pushes the main content down to make space for the fixed banner */
-
+        height: auto;
+        margin-top: 5vh;
+        padding-bottom: 5vh; /* Ensures bottom space on small screens */
     }
-
 }
