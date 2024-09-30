@@ -147,7 +147,7 @@ function setVh() {
 }
 
 // Set the custom vh value when the page loads
-// setVh();
+ setVh();
 
 // Recalculate the vh on window resize or orientation change
 window.addEventListener('resize', setVh);
