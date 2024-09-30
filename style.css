@@ -31,11 +31,11 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     padding: 1.25rem;
     position: relative;
     /* overflow: hidden; */
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 
 .content {
@@ -47,6 +47,14 @@ html, body {
 /* Typography */
 h1 {
     font-size: 6rem;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+/* Typography */
+h2 {
+    font-size: 4rem;
     letter-spacing: 0.1em;
     line-height: 1.2;
     font-weight: normal;
@@ -204,21 +212,39 @@ button:hover {
     color: var(--color-text);
     text-align: center;
     padding: 1vh 0;
-    font-size: 1.2rem;
     font-weight: bold;
     z-index: 1000;
-    box-shadow: 0 2px 5px var(--color-shadow); /* Optional shadow */
+    box-shadow: 0 2px 5px var(--color-shadow);
 }
-@media (max-height: 32rem) or (max-width: 52rem) {
+
+
+/* Media queries for smaller screens */
+
+/* Reduce font size for smaller screens */
+@media (max-height: 38rem) or (max-width: 38rem) {
     h1 {
         font-size: 3rem; /* Reduces font size for smaller screens */
     }
 }
+
+/* Handle small screen widths (phones, tablets) */
 @media (max-height: 32rem) {
     .container {
-        height: 80vh; /* Reduces the height of the main container to 85% of the viewport height */
-        margin-top: 20vh; /* Pushes the main content down to make space for the fixed banner */
-
+        height: auto; /* Allow the height to adjust dynamically */
+        min-height: 75vh; /* Ensure it's not too short */
+        margin-top: 20vh; /* Remove the 5vh margin for better fit */
+        padding-bottom: 5vh; /* Add space at the bottom */
+        overflow-y: auto; /* Enable vertical scrolling if needed */
+        
     }
+}
 
+@media (max-width: 38rem) {
+    .container {
+        height: auto; /* Allow the height to adjust dynamically */
+        min-height: 85vh; /* Ensure it's not too short */
+        margin-top: 10vh; /* Remove the 5vh margin for better fit */
+        padding-bottom: 5vh; /* Add space at the bottom */
+        overflow-y: auto; /* Enable vertical scrolling if needed */
+    }
 }
