@@ -5,7 +5,7 @@ const translations = {
             "<a href='b_work.html' class='link-style-1'>meine Arbeit</a> und meine",
             "Ideen über <a href='b_politics.html' class='link-style-1'>Politik</a>",
         ],
-        about_header: "Wer ich bin",
+        about_header: "Wer <a class='color_highlight'>ich bin</a>",
         about_content: "Ich bin Luis.",
         work_header: "Meine Arbeit",
         work_content: "<ul class='styled-list'><li>Bachelorarbeit</li><li>Masterarbeit</li><li>Power BI Expertise</li><li>und keine Ahnung was noch</li></ul>",
@@ -25,7 +25,7 @@ const translations = {
         work_content: "<ul class='styled-list'><li>Bachelor Thesis</li><li>Master Thesis</li><li>Power BI Expertise</li><li>and no idea what else</li></ul>",
         politics_header: "Ideas about Politics",
         politics_content: "<ul class='styled-list'><li>Work</li><li>In</li><li>Progress</li></ul>",
-        disclaimer: "If you ended up here by mistake, I am just practicing building websites."
+        disclaimer: "I am just practicing building websites :)"
     },
 };
 
@@ -147,7 +147,7 @@ function setVh() {
 }
 
 // Set the custom vh value when the page loads
-setVh();
+// setVh();
 
 // Recalculate the vh on window resize or orientation change
 window.addEventListener('resize', setVh);
