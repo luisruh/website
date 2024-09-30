@@ -29,7 +29,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(var(--vh) * 95); 
+    height: calc(var(--vh) * 85); 
     padding: 1.25rem;
     position: relative;
     margin-top: calc(var(--vh) * 5); 
