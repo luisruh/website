@@ -133,3 +133,21 @@ loadContent('c_corners.html', 'common-boxes');
 function goBack() {
     window.history.back(); // Goes back to the previous page
 }
+
+function setVh() {
+    // Calculate the visible viewport height and set it as a custom CSS property
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Set the custom vh value when the page loads
+setVh();
+
+// Recalculate the vh on window resize or orientation change
+window.addEventListener('resize', setVh);
+window.addEventListener('orientationchange', setVh);
+
+// Prevent scroll if the content is overflowing
+window.addEventListener('load', function() {
+    document.body.style.overflow = 'hidden'; // Ensure no scrollbars on load
+});
