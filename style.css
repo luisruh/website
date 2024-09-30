@@ -215,12 +215,12 @@ button:hover {
     }
 }
 
-@media (max-height: 32rem) {
+/* @media (max-height: 32rem) {
     .container {
         height: auto;
-        min-height: calc(var(--vh) * 75); /* Adjusted for dynamic vh */
-        margin-top: calc(var(--vh) * 20); /* Adjusted for dynamic vh */
-        padding-bottom: calc(var(--vh) * 5); /* Adjusted for dynamic vh */
+        min-height: calc(var(--vh) * 75); 
+        margin-top: calc(var(--vh) * 20); 
+        padding-bottom: calc(var(--vh) * 5); 
         overflow-y: auto;
     }
 }
@@ -228,9 +228,9 @@ button:hover {
 @media (max-width: 38rem) {
     .container {
         height: auto;
-        min-height: calc(var(--vh) * 85); /* Adjusted for dynamic vh */
-        margin-top: calc(var(--vh) * 10); /* Adjusted for dynamic vh */
-        padding-bottom: calc(var(--vh) * 5); /* Adjusted for dynamic vh */
+        min-height: calc(var(--vh) * 85); 
+        margin-top: calc(var(--vh) * 10); 
+        padding-bottom: calc(var(--vh) * 5); 
         overflow-y: auto;
     }
-}
+} */
