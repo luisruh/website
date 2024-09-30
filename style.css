@@ -33,6 +33,7 @@ html, body {
     padding: 1.25rem;
     position: relative;
     margin-top: calc(var(--vh) * 5); 
+    overflow: hidden;
 }
 
 .scr_container {
