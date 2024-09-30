@@ -4,9 +4,9 @@
     --color-text: #333;
     --color-highlight: #b5c84c;
     --color-banner-bg: #e4a393;
-    --color-list-bg: #f0f0f0;
+    --color-list-bg: #ebebeb;
     --color-shadow: grey;
-    --vh: 1vh; /* Custom dynamic vh unit */
+    --vh: 1vh;
 }
 
 /* Basic Reset */
@@ -21,9 +21,9 @@ html, body {
     font-family: 'Playfair Display', serif;
     background-color: var(--color-background);
     color: var(--color-text);
+    overflow-x: hidden; 
 }
 
-/* Container for content */
 .no_scr_container {
     display: flex;
     flex-direction: column;
@@ -38,17 +38,25 @@ html, body {
 .scr_container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: calc(var(--vh) * 95);
     padding: 1.25rem;
     position: relative;
     margin-top: calc(var(--vh) * 5); 
+    overflow-y: auto; 
 }
 
+
 .content {
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
+    width: 70vw;
+    padding: 0vh;
+    font-style: normal;
+    margin-top: calc(var(--vh) * 5); 
+    margin-bottom: calc(var(--vh) * 5); 
+
 }
 
 /* Typography */
@@ -67,17 +75,26 @@ h2 {
     font-weight: normal;
 }
 
-color_highlight {
+
+h3 {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    font-weight: normal;
+    margin-bottom: 2vh;
+}
+
+.color_highlight {
     color: var(--color-highlight);
 }
 
 /* Corner elements */
 .corner-vertical {
     position: absolute;
-    width: calc(var(--vh) * 30); /* Adjusted to use dynamic vh */
+    width: calc(var(--vh) * 30);
     height: 3vw;
     display: flex;
-    border: 1px solid var(--color-invisible-border);
+    border: 0px solid var(--color-invisible-border);
 }
 
 .rotated-text {
@@ -92,12 +109,12 @@ color_highlight {
     height: 3vw;
     display: flex;
     font-size: 1.2rem;
-    border: 1px solid var(--color-invisible-border);
+    border: 0px solid var(--color-invisible-border);
 }
 
 /* Positioning for corner containers */
 .top-left {
-    top: calc(var(--vh) * 31); /* Adjusted for dynamic vh */
+    top: calc(var(--vh) * 31);
     left: 1vw;
     justify-content: right;
     align-items: end;
@@ -181,18 +198,20 @@ button:hover {
     margin: 0;
 }
 
+
 .styled-list li {
     padding: 0.9375rem 1.875rem;
     margin: 0.9375rem 0;
-    background-color: var(--color-background);
+    background-color: var(--color-list-bg);
     border-left: 0.375rem solid var(--color-highlight);
-    border-radius: 0.375rem;
+    /* border-radius: 0.375rem; */
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
-    text-align: left;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
+
 }
 
 /* Language button styles */
@@ -220,7 +239,7 @@ button:hover {
     padding: calc(var(--vh) * 1) 0; /* Adjusted for dynamic vh */
     font-weight: bold;
     z-index: 1000;
-    box-shadow: 0 2px 5px var(--color-shadow);
+    /* box-shadow: 0 2px 5px var(--color-shadow); */
 }
 
 /* Media queries for smaller screens */
