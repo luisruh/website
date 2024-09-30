@@ -1,250 +1,148 @@
-:root {
-    --color-background: #f4f4f4;
-    --color-invisible-border: var(--color-background);
-    --color-text: #333;
-    --color-highlight: #b5c84c;
-    --color-banner-bg: #e4a393;
-    --color-list-bg: #f0f0f0;
-    --color-shadow: grey
-}
+const translations = {
+    de: {
+        main_intro_sentence: [
+            "Wer <a href='b_about.html' class='link-style-1'>ich bin</a>,",
+            "<a href='b_work.html' class='link-style-1'>meine Arbeit</a> und meine",
+            "Ideen über <a href='b_politics.html' class='link-style-1'>Politik</a>",
+        ],
+        about_header: "Wer ich bin",
+        about_content: "Ich bin Luis.",
+        work_header: "Meine Arbeit",
+        work_content: "<ul class='styled-list'><li>Bachelorarbeit</li><li>Masterarbeit</li><li>Power BI Expertise</li><li>und keine Ahnung was noch</li></ul>",
+        politics_header: "Ideen über Politik",
+        politics_content:  "<ul class='styled-list'><li>In</li><li>Bearbeitung</li></ul>", // Schwarze Null, Sozialleistungen, Umweltschutz
+        disclaimer: "Ich übe nur ein bisschen Website bauen :) "
+    },
+    en: {
+        main_intro_sentence: [
+            "Who <a href='b_about.html' class='link-style-1'>I Am</a>,",
+            "<a href='b_work.html' class='link-style-1'>my work</a> and my",
+            "ideas about <a href='b_politics.html' class='link-style-1'>politics</a>",
+        ],
+        about_header: "Who I am",
+        about_content: "I am Luis.",
+        work_header: "My Work",
+        work_content: "<ul class='styled-list'><li>Bachelor Thesis</li><li>Master Thesis</li><li>Power BI Expertise</li><li>and no idea what else</li></ul>",
+        politics_header: "Ideas about Politics",
+        politics_content: "<ul class='styled-list'><li>Work</li><li>In</li><li>Progress</li></ul>",
+        disclaimer: "If you ended up here by mistake, I am just practicing building websites."
+    },
+};
+
+function setLanguage(lang) {
+    const mainIntroElement = document.getElementById('main_intro_sentence');
+    const aboutHeaderElement = document.getElementById('about_header');
+    const aboutContentElement = document.getElementById('about_content');
+    const workHeaderElement = document.getElementById('work_header');
+    const workContentElement = document.getElementById('work_content');
+    const politicsHeaderElement = document.getElementById('politics_header');
+    const politicsContentElement = document.getElementById('politics_content');
+    const disclaimerElement = document.getElementById('disclaimer'); // For the star disclaimer
 
 
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: auto;
-    font-family: 'Playfair Display', serif;
-    background-color: var(--color-background);
-    color: var(--color-text);
-    /* overflow: hidden; */
-}
-
-
-/* Container for content */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-    padding: 1.25rem;
-    position: relative;
-    /* overflow: hidden; */
-    margin-top: 5vh;
-}
-
-.content {
-    text-align: center;
-    margin: 0 auto;
-}
-
-
-/* Typography */
-h1 {
-    font-size: 6rem;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
-    font-weight: normal;
-}
-
-/* Typography */
-h2 {
-    font-size: 4rem;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
-    font-weight: normal;
-}
-
-
-.corner-vertical {
-    position: absolute; /* Positions the element based on the nearest positioned ancestor */
-    width: 30vh; /* Sets a fixed width for the vertical corner element */
-    height: 3vw; /* Sets the height relative to the root font size */
-    display: flex; /* Enables flexbox layout */
-    border: 1px solid var(--color-invisible-border); /* Adds a 1px solid border */
-}
-
-.rotated-text {
-    transform: rotate(0deg); /* Rotates the text by 270 degrees */
-    font-size: 1.2rem; /* Sets the font size to 1.2 times the root font size */
-    transform-origin: right; /* Rotates around the middle */
-}
-
-.corner-horizontal {
-    position: absolute; /* Positions the element based on the nearest positioned ancestor */
-    width: 30vw; /* Sets a fixed width for the horizontal corner element */
-    height: 3vw; /* Sets the height relative to the root font size */
-    display: flex; /* Enables flexbox layout */
-    font-size: 1.2rem; /* Sets the font size to 1.2 times the root font size */
-    border: 1px solid var(--color-invisible-border); /* Adds a 1px solid border */
-}
-
-/* Positioning for corner containers */
-.top-left {
-    top: 31vh; /* Distance from the top of the containing element */
-    left: 1vw; /* Distance from the left of the containing element */
-    justify-content: right; /* Centers items horizontally within the flex container */
-    align-items: end; /* Centers items vertically within the flex container */
-    flex-direction: column;
-    justify-content: left;
-    transform: rotate(270deg); /* Rotate the container by 45 degrees */
-    transform-origin: top left; /* Rotate around the bottom right corner */
-
-}
-
-.top-right {
-    top: 1vh; /* Distance from the top of the containing element */
-    right: 1vw; /* Distance from the right side of the containing element */
-    justify-content: right; /* Centers items horizontally within the flex container */
-    align-items: start; /* Centers items vertically within the flex container */
-}
-
-.bottom-left {
-    bottom: 1vh; /* Distance from the bottom of the containing element */
-    left: 1vw; /* Distance from the left of the containing element */
-    justify-content: left; /* Centers items horizontally within the flex container */
-    align-items: end; /* Centers items vertically within the flex container */
-}
-
-.bottom-right {
-    bottom: 31vh; /* Distance from the bottom of the containing element */
-    right: 1vw; /* Distance from the right of the containing element */
-    justify-content:end; /* Centers items horizontally within the flex container */
-    align-items: start; /* Centers items vertically within the flex container */
-    flex-direction: column;
-    transform: rotate(270deg); /* Rotate the container by 45 degrees */
-    transform-origin: bottom right; /* Rotate around the bottom right corner */
-}
-
-
-
-/* Default link style */
-a {
-    color: inherit; /* Uses the parent element's text color */
-    text-decoration: none; /* Removes underline */
-}
-
-a:hover {
-    font-style: italic; /* Italicizes text on hover */
-}
-
-/* Styles 1 */
-.link-style-1 {
-    color: var(--color-highlight); /* Sets the color for link style 1 */
-}
-
-.link-style-1:hover {
-    font-weight: italic; /* Italicizes text on hover for link style 1 */
-}
-
-/* Style 2 */
-.link-style-2 {
-    color: inherit; /* Inherits the text color from the parent */
-}
-
-.link-style-2:hover {
-    text-decoration: none; /* Removes underline on hover */
-}
-
-/* Button styles */
-button {
-    font-size: 1.2rem; /* Sets the font size for buttons */
-    color: var(--color-highlight); /* Sets the text color */
-    font-family: 'Playfair Display', serif; /* Sets the font for buttons */
-    background: none; /* Removes the default background */
-    border: none; /* Removes the default border */
-    cursor: pointer; /* Changes cursor to pointer */
-    margin-left: 0.3125rem; /* Adds left margin */
-    transition: font-style 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Button hover effect italic */
-button:hover {
-    font-style: italic; /* Italicizes text on hover */
-}
-
-.styled-list {
-    list-style-type: none; /* Removes bullet points */
-    padding-left: 0; /* No left padding since bullets are removed */
-    margin: 0; /* Resets margin */
-}
-
-.styled-list li {
-    padding: 0.9375rem 1.875rem; /* Sets padding for list items */
-    margin: 0.9375rem 0; /* Sets margin for list items */
-    background-color: var(--color-background); /* Sets a light background color for list items */
-    border-left: 0.375rem solid var(--color-highlight); /* Adds a left border to list items */
-    border-radius: 0.375rem; /* Rounds the corners of list items */
-    font-size: 1.2rem; /* Sets the font size */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-    text-align: left; /* Ensures text is left-aligned */
-    width: 100%; /* Makes the list item wider */
-    margin-left: auto; /* Centers the list item */
-    margin-right: auto; /* Centers the list item */
-}
-
-/* Button styles */
-.language-button {
-    color: var(--color-highlight); /* Standard color for inactive languages */
-    background: transparent; /* Transparent background */
-    border: none; /* No border */
-    cursor: pointer; /* Cursor pointer on hover */
-    font-size: 1.2rem; /* Sets the font size for buttons */
-    margin: 0 0.3125rem; /* Adds spacing between buttons */
-}
-
-/* Active language style */
-.language-button.active {
-    color: var(--color-text); /* Active language in black */
-}
-
-/* Top banner styling */
-.top-banner {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: var(--color-banner-bg);
-    color: var(--color-text);
-    text-align: center;
-    padding: 1vh 0;
-    font-weight: bold;
-    z-index: 1000;
-    box-shadow: 0 2px 5px var(--color-shadow);
-}
-
-
-/* Media queries for smaller screens */
-
-/* Reduce font size for smaller screens */
-@media (max-height: 38rem) or (max-width: 38rem) {
-    h1 {
-        font-size: 3rem; /* Reduces font size for smaller screens */
+    // Check if mainIntroElement exists and update
+    if (mainIntroElement) {
+        mainIntroElement.innerHTML = translations[lang].main_intro_sentence.join('<br>');
     }
+
+    // Check if aboutHeaderElement exists and update
+    if (aboutHeaderElement) {
+        aboutHeaderElement.innerHTML = translations[lang].about_header;
+    }
+
+    // Check if aboutContentElement exists and update
+    if (aboutContentElement) {
+        aboutContentElement.innerHTML = translations[lang].about_content;
+    }
+
+    // Check if workHeaderElement exists and update
+    if (workHeaderElement) {
+        workHeaderElement.innerHTML = translations[lang].work_header;
+    }
+
+    // Check if workContentElement exists and update
+    if (workContentElement) {
+        workContentElement.innerHTML = translations[lang].work_content;
+    }
+
+    // Check if politicsHeaderElement exists and update
+    if (politicsHeaderElement) {
+        politicsHeaderElement.innerHTML = translations[lang].politics_header;
+    }
+
+    // Check if politicsContentElement exists and update
+    if (politicsContentElement) {
+        politicsContentElement.innerHTML = translations[lang].politics_content;
+    }
+
+    // Update the star disclaimer if it exists
+    if (disclaimerElement) {
+        disclaimerElement.innerHTML = translations[lang].disclaimer;
+    }
+
+    // Update button styles after setting the language
+    updateButtonStyles(lang);
+
+    // Save the selected language in local storage
+    localStorage.setItem('selectedLanguage', lang);
 }
 
-/* Handle small screen widths (phones, tablets) */
-@media (max-height: 32rem) {
-    .container {
-        height: auto; /* Allow the height to adjust dynamically */
-        min-height: 75vh; /* Ensure it's not too short */
-        margin-top: 20vh; /* Remove the 5vh margin for better fit */
-        padding-bottom: 5vh; /* Add space at the bottom */
-        overflow-y: auto; /* Enable vertical scrolling if needed */
-        
-    }
+
+function updateButtonStyles(lang) {
+    const buttons = document.querySelectorAll('.language-button');
+    buttons.forEach(button => {
+        if (button.id === `lang-${lang}`) {
+            button.classList.add('active'); // Highlight active button
+        } else {
+            button.classList.remove('active'); // Remove highlight from inactive button
+        }
+    });
 }
 
-@media (max-width: 38rem) {
-    .container {
-        height: auto; /* Allow the height to adjust dynamically */
-        min-height: 85vh; /* Ensure it's not too short */
-        margin-top: 10vh; /* Remove the 5vh margin for better fit */
-        padding-bottom: 5vh; /* Add space at the bottom */
-        overflow-y: auto; /* Enable vertical scrolling if needed */
-    }
+function loadLanguage() {
+    // Check if a language is saved in local storage
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    const defaultLanguage = 'de'; // Default to German if no language is saved
+  
+    // If there's a saved language, use it; otherwise, use the default language
+    const languageToSet = savedLanguage || defaultLanguage;
+    setLanguage(languageToSet); // Pass the retrieved language
+  
+    // Update button styles after setting the language
+    updateButtonStyles(languageToSet); // Pass the retrieved language
+  }
+
+function loadContent(file, elementId) {
+    fetch(file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+            loadLanguage(); // Load the language after content has been loaded
+        })
+        .catch(error => console.error('Error loading content:', error));
 }
+
+// Call the loadContent function to load the corner buttons
+loadContent('c_corners.html', 'common-boxes');
+
+function goBack() {
+    window.history.back(); // Goes back to the previous page
+}
+
+function setVh() {
+    // Calculate the visible viewport height and set it as a custom CSS property
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Set the custom vh value when the page loads
+setVh();
+
+// Recalculate the vh on window resize or orientation change
+window.addEventListener('resize', setVh);
+window.addEventListener('orientationchange', setVh);
