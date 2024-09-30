@@ -5,8 +5,11 @@ const translations = {
             "<a href='b_work.html' class='link-style-1'>meine Arbeit</a> und meine",
             "Ideen über <a href='b_politics.html' class='link-style-1'>Politik</a>",
         ],
-        about_header: "Wer <a class='color_highlight'>ich bin</a>",
-        about_content: "Ich bin Luis.",
+        about_header: "Wer <span class='color_highlight'>ich bin</span>",
+        about_content: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+                "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+            ],
         work_header: "Meine Arbeit",
         work_content: "<ul class='styled-list'><li>Bachelorarbeit</li><li>Masterarbeit</li><li>Power BI Expertise</li><li>und keine Ahnung was noch</li></ul>",
         politics_header: "Ideen über Politik",
@@ -19,8 +22,11 @@ const translations = {
             "<a href='b_work.html' class='link-style-1'>my work</a> and my",
             "ideas about <a href='b_politics.html' class='link-style-1'>politics</a>",
         ],
-        about_header: "Who I am",
-        about_content: "I am Luis.",
+        about_header: "Who <span class='color_highlight'>I am</span>",
+        about_content: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+                "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+            ],
         work_header: "My Work",
         work_content: "<ul class='styled-list'><li>Bachelor Thesis</li><li>Master Thesis</li><li>Power BI Expertise</li><li>and no idea what else</li></ul>",
         politics_header: "Ideas about Politics",
@@ -37,7 +43,8 @@ function setLanguage(lang) {
     const workContentElement = document.getElementById('work_content');
     const politicsHeaderElement = document.getElementById('politics_header');
     const politicsContentElement = document.getElementById('politics_content');
-    const disclaimerElement = document.getElementById('disclaimer'); // For the star disclaimer
+    const disclaimerElement = document.getElementById('disclaimer');
+    
 
 
     // Check if mainIntroElement exists and update
@@ -52,7 +59,7 @@ function setLanguage(lang) {
 
     // Check if aboutContentElement exists and update
     if (aboutContentElement) {
-        aboutContentElement.innerHTML = translations[lang].about_content;
+        aboutContentElement.innerHTML = translations[lang].about_content.join('<br><br>');
     }
 
     // Check if workHeaderElement exists and update
@@ -147,7 +154,7 @@ function setVh() {
 }
 
 // Set the custom vh value when the page loads
- setVh();
+// setVh();
 
 // Recalculate the vh on window resize or orientation change
 window.addEventListener('resize', setVh);
