@@ -138,6 +138,12 @@ function setVh() {
     // Calculate the visible viewport height and set it as a custom CSS property
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // Log the calculated vh value to the console
+    console.log(`Viewport height: ${vh * 100}px`);
+
+    // Display the calculated vh value on the page
+    document.getElementById('viewport-height-display').innerHTML = `Viewport height: ${vh * 100}px`;
 }
 
 // Set the custom vh value when the page loads
