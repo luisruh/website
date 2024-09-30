@@ -150,11 +150,11 @@ function setVh() {
     console.log(`Viewport height: ${vh * 100}px`);
 
     // Display the calculated vh value on the page
-    document.getElementById('viewport-height-display').innerHTML = `Viewport height: ${vh * 100}px`;
+    document.getElementById('viewport-height-display').innerHTML = `${vh * 100}px`;
 }
 
 // Set the custom vh value when the page loads
-// setVh();
+setVh();
 
 // Recalculate the vh on window resize or orientation change
 window.addEventListener('resize', setVh);
@@ -164,3 +164,4 @@ window.addEventListener('orientationchange', setVh);
 window.addEventListener('load', function() {
     document.body.style.overflow = 'hidden'; // Ensure no scrollbars on load
 });
+
