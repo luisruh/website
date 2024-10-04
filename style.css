@@ -185,7 +185,6 @@ button {
     background: none;
     border: none;
     cursor: pointer;
-    margin-left: 0.3125rem;
     transition: font-style 0.3s ease;
 }
 
@@ -201,18 +200,23 @@ button:hover {
 
 
 .styled-list li {
+    position: relative; /* Ensure the hidden content is positioned correctly */
     padding: 0.9375rem 1.875rem;
     margin: 0.9375rem 0;
     background-color: var(--color-list-bg);
     border-left: 0.375rem solid var(--color-highlight);
-    /* border-radius: 0.375rem; */
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    cursor: pointer; /* Add pointer to indicate clickability */
+}
 
+.styled-list li.open .hidden-content {
+    display: block;
+    transition: all 0.3s ease;
 }
 
 /* Language button styles */
@@ -243,12 +247,30 @@ button:hover {
     /* box-shadow: 0 2px 5px var(--color-shadow); */
 }
 
+.hidden-content {
+    display: none; /* Hidden by default */
+    background-color: var(--color-background); 
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: -5px;
+    width: 100%; /* Ensure it takes the full width of the list item */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
 /* Media queries for smaller screens */
 @media (max-height: 38rem) or (max-width: 38rem) {
     h1 {
         font-size: 3rem;
     }
+    .pdf-viewer {
+        display: none;
+    }
 }
+
+
+
 
 /* @media (max-height: 32rem) {
     .container {

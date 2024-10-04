@@ -1,91 +1,124 @@
+
 const translations = {
     de: {
         main_intro_sentence: [
-            "Wer <a href='b_about.html' class='link-style-1'>ich bin</a>,",
-            "<a href='b_work.html' class='link-style-1'>meine Arbeit</a> und meine",
-            "Ideen über <a href='b_politics.html' class='link-style-1'>Politik</a>",
+            "Wer <a href='ja_i.html' class='link-style-1'>ich</a> bin, meine<a href='jb_cv.html' class='link-style-1'> beruflichen Erfahrungen </a> und Gedanken zur<a href='jc_politics.html' class='link-style-1'> Politik</a>",
         ],
-        about_header: "Wer <span class='color_highlight'>ich bin</span>",
-        about_content: [
+        i_header: "Wer <span class='color_highlight'>ich</span> bin",
+        i_content: [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
-                "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+                "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.",
             ],
-        work_header: "Meine Arbeit",
-        work_content: "<ul class='styled-list'><li>Bachelorarbeit</li><li>Masterarbeit</li><li>Power BI Expertise</li><li>und keine Ahnung was noch</li></ul>",
-        politics_header: "Ideen über Politik",
-        politics_content:  "<ul class='styled-list'><li>In</li><li>Bearbeitung</li></ul>", // Schwarze Null, Sozialleistungen, Umweltschutz
+        cv_header: "Meine <span class='color_highlight'>beruflichen Erfahrungen</span>",
+        cv_content: [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+            "Hier kannste gern meinen <button onclick=\"window.location.href='01_files/cv_private.pdf'\" download>Lebenslauf herunterzuladen</button>.<br>"
+        ],
+        cv_projects: `
+            <ul class='styled-list'>
+                <li onclick="toggleContent(this)">
+                    Bachelor Thesis
+                    <span class="hidden-content">Additional information about the Bachelor Thesis.</span>
+                </li>
+                <li onclick="toggleContent(this)">
+                    Master Thesis
+                    <span class="hidden-content">Additional information about the Master Thesis.</span>
+                </li>
+                <li onclick="toggleContent(this)">
+                    Power BI Expertise
+                    <span class="hidden-content">Additional information about Power BI Expertise.</span>
+                </li>
+                <li onclick="toggleContent(this)">
+                    and no idea what else
+                    <span class="hidden-content">Additional information about other work.</span>
+                </li>
+            </ul>
+            `,
+        politics_header: "Gedanken zur <span class='color_highlight'>Politik</span>",
+        politics_content: `
+            <ul class='styled-list'>
+            <li onclick="toggleContent(this)">In
+                <span class="hidden-content"> - das heitß noch nichts fertig</span>
+            </li>
+            <li onclick="toggleContent(this)">Bearbeitung
+                <span class="hidden-content"> - 🙄🙄🙄 </span>
+
+        </ul>`,        
         disclaimer: "Ich übe nur ein bisschen Website bauen :) "
     },
     en: {
         main_intro_sentence: [
-            "Who <a href='b_about.html' class='link-style-1'>I Am</a>,",
-            "<a href='b_work.html' class='link-style-1'>my work</a> and my",
-            "ideas about <a href='b_politics.html' class='link-style-1'>politics</a>",
+            "Who <a href='ja_i.html' class='link-style-1'>I</a> am, my<a href='jb_cv.html' class='link-style-1'> professional experiences</a>, and thoughts on<a href='jc_politics.html' class='link-style-1'> politics</a>"
         ],
-        about_header: "Who <span class='color_highlight'>I am</span>",
-        about_content: [
+        i_header: "Who <span class='color_highlight'>I</span> am",
+        i_content: [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
                 "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
             ],
-        work_header: "My Work",
-        work_content: "<ul class='styled-list'><li>Bachelor Thesis</li><li>Master Thesis</li><li>Power BI Expertise</li><li>and no idea what else</li></ul>",
-        politics_header: "Ideas about Politics",
-        politics_content: "<ul class='styled-list'><li>Work</li><li>In</li><li>Progress</li></ul>",
+        cv_header: "My <span class='color_highlight'>professional experiences</span>",
+        cv_content: [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+            "Feel free to <button onclick=\"window.location.href='01_files/cv_private.pdf'\" download>download my CV</button>."
+        ],
+        cv_projects: `
+        <ul class='styled-list'>
+            <li onclick="toggleContent(this)">Bachelorarbeit
+                <span class="hidden-content"> - Zusätzliche Informationen über die Bachelorarbeit.</span>
+            </li>
+            <li onclick="toggleContent(this)">Masterarbeit
+                <span class="hidden-content"> - Zusätzliche Informationen über die Masterarbeit.</span>
+            </li>
+            <li onclick="toggleContent(this)">Power BI Expertise
+                <span class="hidden-content"> - Zusätzliche Informationen über die Power BI Expertise.</span>
+            </li>
+            <li onclick="toggleContent(this)">und keine Ahnung was sonst
+                <span class="hidden-content"> - Zusätzliche Informationen über andere Arbeiten.</span>
+            </li>
+        </ul>`,
+        politics_header: "Thoughts on <span class='color_highlight'>politics</span>",
+        politics_into: [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+        ],
+        politics_content: `
+            <ul class='styled-list'>
+            <li onclick="toggleContent(this)">In
+                <span class="hidden-content"> - Told you dah</span>
+            </li>
+            <li onclick="toggleContent(this)">Progress
+                <span class="hidden-content"> - 🙄🙄🙄 </span>
+
+        </ul>`,
         disclaimer: "I am just practicing building websites :)"
     },
 };
 
 function setLanguage(lang) {
-    const mainIntroElement = document.getElementById('main_intro_sentence');
-    const aboutHeaderElement = document.getElementById('about_header');
-    const aboutContentElement = document.getElementById('about_content');
-    const workHeaderElement = document.getElementById('work_header');
-    const workContentElement = document.getElementById('work_content');
-    const politicsHeaderElement = document.getElementById('politics_header');
-    const politicsContentElement = document.getElementById('politics_content');
-    const disclaimerElement = document.getElementById('disclaimer');
-    
+    const elementsToUpdate = [
+        { id: 'main_intro_sentence', content: translations[lang].main_intro_sentence.join('<br>') },
+        { id: 'disclaimer', content: translations[lang].disclaimer },
 
+        { id: 'i_header', content: translations[lang].i_header },
+        { id: 'i_content', content: translations[lang].i_content.join('<br><br>') },
 
-    // Check if mainIntroElement exists and update
-    if (mainIntroElement) {
-        mainIntroElement.innerHTML = translations[lang].main_intro_sentence.join('<br>');
-    }
+        { id: 'cv_header', content: translations[lang].cv_header },
+        { id: 'cv_content', content: translations[lang].cv_content.join('<br><br>')  },
+        { id: 'cv_projects', content: translations[lang].cv_projects },
 
-    // Check if aboutHeaderElement exists and update
-    if (aboutHeaderElement) {
-        aboutHeaderElement.innerHTML = translations[lang].about_header;
-    }
+        { id: 'politics_header', content: translations[lang].politics_header },
+        { id: 'politics_intro', content: translations[lang].politics_intro },
+        { id: 'politics_content', content: translations[lang].politics_content }
+    ];
 
-    // Check if aboutContentElement exists and update
-    if (aboutContentElement) {
-        aboutContentElement.innerHTML = translations[lang].about_content.join('<br><br>');
-    }
-
-    // Check if workHeaderElement exists and update
-    if (workHeaderElement) {
-        workHeaderElement.innerHTML = translations[lang].work_header;
-    }
-
-    // Check if workContentElement exists and update
-    if (workContentElement) {
-        workContentElement.innerHTML = translations[lang].work_content;
-    }
-
-    // Check if politicsHeaderElement exists and update
-    if (politicsHeaderElement) {
-        politicsHeaderElement.innerHTML = translations[lang].politics_header;
-    }
-
-    // Check if politicsContentElement exists and update
-    if (politicsContentElement) {
-        politicsContentElement.innerHTML = translations[lang].politics_content;
-    }
-
-    // Update the star disclaimer if it exists
-    if (disclaimerElement) {
-        disclaimerElement.innerHTML = translations[lang].disclaimer;
-    }
+    // Loop over elements and update their content if they exist
+    elementsToUpdate.forEach(element => {
+        const el = document.getElementById(element.id);
+        if (el) {
+            el.innerHTML = element.content;
+        }
+    });
 
     // Update button styles after setting the language
     updateButtonStyles(lang);
@@ -94,30 +127,30 @@ function setLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
 }
 
+function toggleContent(listItem) {
+    const hiddenContent = listItem.querySelector('.hidden-content');
+    if (hiddenContent) {
+        // Toggle between showing and hiding the content
+        if (hiddenContent.style.display === 'none' || !hiddenContent.style.display) {
+            hiddenContent.style.display = 'block'; // Show the content
+        } else {
+            hiddenContent.style.display = 'none'; // Hide the content
+        }
+    }
+}
+
 
 function updateButtonStyles(lang) {
     const buttons = document.querySelectorAll('.language-button');
     buttons.forEach(button => {
-        if (button.id === `lang-${lang}`) {
-            button.classList.add('active'); // Highlight active button
-        } else {
-            button.classList.remove('active'); // Remove highlight from inactive button
-        }
+        button.classList.toggle('active', button.id === `lang-${lang}`);
     });
 }
 
 function loadLanguage() {
-    // Check if a language is saved in local storage
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    const defaultLanguage = 'de'; // Default to German if no language is saved
-  
-    // If there's a saved language, use it; otherwise, use the default language
-    const languageToSet = savedLanguage || defaultLanguage;
-    setLanguage(languageToSet); // Pass the retrieved language
-  
-    // Update button styles after setting the language
-    updateButtonStyles(languageToSet); // Pass the retrieved language
-  }
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'de'; // Default to German if not saved
+    setLanguage(savedLanguage); // Set the saved or default language
+}
 
 function loadContent(file, elementId) {
     fetch(file)
@@ -129,39 +162,31 @@ function loadContent(file, elementId) {
         })
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
-            loadLanguage(); // Load the language after content has been loaded
+            loadLanguage(); // Load language after content is loaded
         })
         .catch(error => console.error('Error loading content:', error));
 }
 
-// Call the loadContent function to load the corner buttons
-loadContent('c_corners.html', 'common-boxes');
+// Load corner buttons on the page
+loadContent('k_corners.html', 'common-boxes');
 
 function goBack() {
-    window.history.back(); // Goes back to the previous page
+    window.history.back();
 }
 
 function setVh() {
-    // Calculate the visible viewport height and set it as a custom CSS property
-    let vh = window.innerHeight * 0.01;
+    const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-    // Log the calculated vh value to the console
     console.log(`Viewport height: ${vh * 100}px`);
-
-    // Display the calculated vh value on the page
     document.getElementById('viewport-height-display').innerHTML = `${vh * 100}px`;
 }
 
-// Set the custom vh value when the page loads
+// Set vh when the page loads
 setVh();
-
-// Recalculate the vh on window resize or orientation change
 window.addEventListener('resize', setVh);
 window.addEventListener('orientationchange', setVh);
 
-// Prevent scroll if the content is overflowing
-window.addEventListener('load', function() {
-    document.body.style.overflow = 'hidden'; // Ensure no scrollbars on load
+// Prevent scrolling if content is overflowing
+window.addEventListener('load', () => {
+    document.body.style.overflow = 'hidden';
 });
-
