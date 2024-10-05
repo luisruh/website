@@ -1,6 +1,7 @@
 
 const translations = {
     de: {
+        home: ["Home"],
         main_intro_sentence: [
             "Wer <a href='ja_i.html' class='link-style-1'>ich</a> bin, meine<a href='jb_cv.html' class='link-style-1'> beruflichen Erfahrungen </a> und Gedanken zur<a href='jc_politics.html' class='link-style-1'> Politik</a>",
         ],
@@ -15,42 +16,40 @@ const translations = {
         ],
         cv_projects: `
         <ul class='styled-list'>
-            <li onclick="toggleContent(this)">Mein Bachelor<span class="hidden-content"> 
+            <li onclick="toggleContent(this)">Mein Bachelor in BWL<span class="hidden-content"> 
                 Während meines BWL-Bachelors an der Leibniz Fachhochschule habe ich eine solide Grundlage in betriebswirtschaftlichen Prinzipien entwickelt, die durch einen praktischen, hands-on Ansatz in kleinen Gruppen ergänzt wurde. Das Programm legte Wert auf Fähigkeiten in Management, Finanzen und Marketing – 08/15 BWL Studium. Was es dann aber doch anders gemacht hat, waren die wechselnden praktischen Phasen und Semester. So konnte ich in sechs verschiedene Abteilungen Erfahrungen sammeln und herausfinden, wo ich am besten hin passe. Während meiner letzter praktischen Phase und späteren Rolle als Financial Analyst hab ich meine Bachelorarbeit zur Implementierung von Self-Service Business Intelligence geschrieben. Das hat mir einen guten Übergang in meinen ersten richtigen Job gewährt, da ebendiese Implementierung von Self-Service BI eines der Hauptziele in meiner späteren Rolle war.
             </span></li>
-            <li onclick="toggleContent(this)">Was mein Master in Digital Economy umfasst<span class="hidden-content">
+            <li onclick="toggleContent(this)">Mein Master in Digital Economy<span class="hidden-content">
                 Aktuell absolviere ich einen Master in Digital Economy an der Wirtschaftsuniversität Wien, wo ich mich mit Themen beschäftige, die IT und Wirtschaft verbinden. Von Business Process Management über Data Management bis hin zu Analytics sind die Kurse darauf ausgelegt, Leuten zu helfen wie mir, die sich zwischen Business und IT wohl fühlen. Das Studium an einer großen Universität bietet mir eine andere Perspektive im Vergleich zu meiner Zeit an einer kleinen FH. Wenn Sie interessiert sind, finden Sie das Programm über diesen <a class='link-style-1' href='https://www.wu.ac.at/en/programs/masters-programs/digital-economy' target='_blank'>Link</a>.
-            </span></li>
-            <li onclick="toggleContent(this)">Masterarbeit<span class="hidden-content">
-                Wird geschrieben.
             </span></li>
             <li onclick="toggleContent(this)">Power BI Expertise<span class="hidden-content">
                 Zusätzliche Informationen zu meiner Power BI-Expertise.
             </span></li>
             <li onclick="toggleContent(this)">Projektmanagement<span class="hidden-content">
-                Zusätzliche Informationen zu anderen Projekten.
+                Ich habe in verschiedenen Projekten an der Uni und im Job mitgearbeitet und dabei praktische Erfahrungen gesammelt. Als IHK-zertifizierter Projektmanager leite ich derzeit ein Projekt mit einem crossfunktionalen und internationalen Team, was interessante Herausforderungen mit sich bringt und den Fokus auf gute Zusammenarbeit legt.
             </span></li>
-            <li onclick="toggleContent(this)">IT & Codierung<span class="hidden-content">
-                Zusätzliche Informationen zu IT & Codierung.
+            <li onclick="toggleContent(this)">Coding<span class="hidden-content">
+                Während meines Bachelors hatte ich wenig Kontakt mit Programmierung. Aber als Financial Analyst DWH habe ich mir SQL 'on the job' beigebracht und es dann auch täglich genutzt. In meinem Masterstudium habe ich dann R und Python für Analysen gelernt. Die Website, die Du gerade offen hast, ist mein erstes Projekt mit HTML, CSS und JavaScript.
             </span></li>
             <li onclick="toggleContent(this)">Und andere interessante Arbeiten<span class="hidden-content">
-                Zusätzliche Informationen zu anderen Projekten.
+                In Arbeit 🚧
             </span></li>
         </ul>`,        
         politics_header: "Gedanken zur <span class='color_highlight'>Politik</span>",
         politics_content: `
             <ul class='styled-list'>
             <li onclick="toggleContent(this)">In
-                <span class="hidden-content"> - das heitß noch nichts fertig</span>
+                <span class="hidden-content"> Also noch nicht fertig Mensch </span>
             </li>
             <li onclick="toggleContent(this)">Bearbeitung
-                <span class="hidden-content"> - 🙄🙄🙄 </span>
+                <span class="hidden-content"> 🙄🙄🙄 </span>
 
         </ul>`,        
         disclaimer: "Ich übe nur ein bisschen Website bauen :) ",
         back_button: `<span class="rotated-text">Geh' <button onclick="goBack()">Zurück</button></div></span>`
     },
     en: {
+        home: ["Start"],
         main_intro_sentence: [
             "Who <a href='ja_i.html' class='link-style-1'>I</a> am, my<a href='jb_cv.html' class='link-style-1'> professional experiences</a>, and thoughts on<a href='jc_politics.html' class='link-style-1'> politics</a>"
         ],
@@ -61,30 +60,27 @@ const translations = {
             ],
         cv_header: "My <span class='color_highlight'>professional experiences</span>",
         cv_content: [
-            "I have spent my entire professional career at Continental—aside from juggling a couple of school jobs before, of course! Starting with my integrated bachelor’s program, which alternated between three months of university and three months of practical phases, I got my hands dirty in various departments. I transitioned into my first job as a Financial Analyst in the Data Warehouse at the end of my studies, where I handled financial reporting, automated processes in general, and built dashboards for many departments—making reporting tools less of a headache! Now, I've moved to Vienna to work half-time as a Controlling Analyst at ContiTrade Austria, applying the expertise I've mastered previously while studying Digital Economy at WU. Below, you'll find a detailed overview of my areas of expertise and academic achievements. Also, feel free to <a class='link-style-1' onclick=\"window.location.href='01_files/cv_private.pdf'\" download>download my CV</a>."
+            "I have spent my entire professional career at Continental—aside from juggling a couple of school jobs before, of course! Starting with my integrated bachelor’s program, which alternated between three months of university and three months of practical phases, I got my hands dirty in various departments. I transitioned into my first job as a Financial Analyst in the Data Warehouse at the end of my studies, where I handled financial reporting, automated processes in general, and built dashboards for many departments—making reporting tools less of a headache! Now, I've moved to Vienna to work part-time as a Controlling Analyst at ContiTrade Austria, applying the expertise I've mastered previously while studying Digital Economy at WU. Below, you'll find a detailed overview of my areas of expertise and academic achievements. Also, feel free to <a class='link-style-1' onclick=\"window.location.href='01_files/cv_private.pdf'\" download>download my CV</a>."
         ],
         cv_projects: `
         <ul class='styled-list'>
-            <li onclick="toggleContent(this)">My Bachelor<span class="hidden-content"> 
+            <li onclick="toggleContent(this)">My Bachelor in Business Administration<span class="hidden-content"> 
                 During my Bachelor of Arts in Business Administration at Leibniz Fachhochschule, I developed a solid foundation in business principles, enhanced by a practical, hands-on approach in small group settings. The program emphasized skills in management, finance, and marketing—basically, your classic business administration recipe. What set it apart was the alternating practical phases and semesters, allowing me to explore six different departments and figure out where I fit best in the business world. While juggling my last practical phase and my later role as a Financial Analyst, I managed to write my bachelor’s thesis on the implementation of Self-Service Business Intelligence. This not only ensured a seamless transition from academia to professional life but also laid the groundwork for my subsequent work in finance and data analysis.
             </span></li>
-            <li onclick="toggleContent(this)">What My Master's in Digital Economy Entails<span class="hidden-content">
+            <li onclick="toggleContent(this)">My Master's in Digital Economy<span class="hidden-content">
                 I'm currently pursuing a Master’s in Digital Economy at Wirtschaftsuniversität Wien, where I’m diving into a range of subjects that bridge IT and business. From Business Process Management to Data Management and Analytics, the courses are geared toward helping professionals like me who somewhere between Business and IT. Studying at a large university gives me a different perspective compared to my time at a small business school. If you are interested you will find the programm with this <a class='link-style-1' href='https://www.wu.ac.at/en/programs/masters-programs/digital-economy' target='_blank'>link</a>.
-            </span></li>
-            <li onclick="toggleContent(this)">Master's Thesis<span class="hidden-content">
-                To be written.
             </span></li>
             <li onclick="toggleContent(this)">Power BI Expertise<span class="hidden-content">
                 Additional information about my Power BI expertise.
             </span></li>
             <li onclick="toggleContent(this)">Project Management<span class="hidden-content">
-                Additional information about other projects.
+                I’ve worked on numerous projects, both at university and at work, gaining valuable experience along the way. I'm also a certified project manager (IHK). Currently, I’m leading a project with a cross-functional and international team, which presents exciting challenges.
             </span></li>
-            <li onclick="toggleContent(this)">IT & Coding<span class="hidden-content">
-                Additional information about IT & Coding.
+            <li onclick="toggleContent(this)">Coding<span class="hidden-content">
+                I didn’t get much exposure to coding during my Bachelor's, but I taught myself SQL on the job, where I ended up using it daily. This hands-on experience helped me develop a solid understanding of working with databases. In my Master’s, I’ve picked up R and Python for analytics. Coding has become something I’m genuinely interested in, and I this website you are currently looking at is my first project with with HTML, CSS, and JavaScript.
             </span></li>
             <li onclick="toggleContent(this)">And Other Interesting Work<span class="hidden-content">
-                Additional information about other projects.
+                Under Construction 🚧
             </span></li>
         </ul>`,        
         politics_header: "Thoughts on <span class='color_highlight'>politics</span>",
@@ -99,7 +95,6 @@ const translations = {
             </li>
             <li onclick="toggleContent(this)">Progress
                 <span class="hidden-content">🙄🙄🙄</span>
-
         </ul>`,
         disclaimer: "I am just practicing building websites :)",
         back_button: `<span class="rotated-text">Go <button onclick="goBack()">Back</button></div></span>`
@@ -108,6 +103,7 @@ const translations = {
 
 function setLanguage(lang) {
     const elementsToUpdate = [
+        { id: 'home', content: translations[lang].home },
         { id: 'main_intro_sentence', content: translations[lang].main_intro_sentence.join('<br>') },
         { id: 'disclaimer', content: translations[lang].disclaimer },
         { id: 'back_button', content: translations[lang].back_button },
