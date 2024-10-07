@@ -12,24 +12,27 @@ const translations = {
             ],
         cv_header: "Meine <span class='color_highlight'>beruflichen Erfahrungen</span>",
         cv_content: [
-            "Ich habe meine gesamte berufliche Karriere bei Continental verbracht – abgesehen davon, dass ich natürlich ein paar Schuljobs gemacht habe! Begonnen habe ich mit meinem integrierten Bachelor-Programm, das zwischen drei Monaten Universität und drei Monaten praktischen Phasen wechselte, wobei ich in verschiedenen Abteilungen praktische Erfahrungen sammelte. Am Ende meines Studiums wechselte ich in meinen ersten Job als Financial Analyst im Data Warehouse, wo ich für das Finanzreporting, die Automatisierung von Prozessen im Allgemeinen und den Aufbau von Dashboards für viele Abteilungen verantwortlich war – das Reporting weniger zu einer Herausforderung machte! Jetzt bin ich nach Wien gezogen, um Teilzeit als Controlling Analyst bei ContiTrade Austria zu arbeiten und das Wissen anzuwenden, das ich zuvor während meines Studiums der Digital Economy an der WU erworben habe. Unten finden Sie eine detaillierte Übersicht über meine Fachgebiete und akademischen Leistungen. Fühlen Sie sich auch frei, <a class='link-style-1' onclick=\"window.location.href='01_files/cv_private.pdf'\" download>meinen Lebenslauf herunterzuladen</a>."
+            "Bisher habe ich meine gesamte berufliche Karriere bei Continental verbracht – abgesehen von ein paar Schuljobs! Begonnen habe ich mit meinem Dualen Studium, das zwischen drei Monaten Fachhochschule und drei Monaten praktischen Phasen wechselte, wobei ich in verschiedenen Abteilungen praktische Erfahrungen sammelte. Am Ende meines Studiums wechselte ich in meinen ersten Job als <em>Financial Analyst Data Warehouse</em>, wo ich für Teile des Finanzreportings, Automatisierungen von Finance & Controlling Prozessen und den Aufbau von Dashboards für viele Abteilungen verantwortlich war! Nach zweieinhalb Jahren auf dieser Stelle bin ich nach Wien gezogen, um Teilzeit als <em>Controlling Analyst</em> bei ContiTrade Austria zu arbeiten. Hier kann ich meine Expertise aus meinem vorherigen Job anwenden und gleichzeitig das lokale Controlling kennenlernen. Im Fokus steht bei mir aber aktuell mein Master-Studium Digital Economy an der WU. Unten hab' ich ein paar details festgehalten zu meinen Fachgebieten und akademischen Leistungen. Darüber hinaus habe ich hier <a class='link-style-1' onclick=\"window.location.href='01_files/cv_private.pdf'\" download>meinen Lebenslauf hinterlegt</a>."
         ],
         cv_projects: `
         <ul class='styled-list'>
             <li onclick="toggleContent(this)">Mein Bachelor in BWL<span class="hidden-content"> 
-                Während meines BWL-Bachelors an der Leibniz Fachhochschule habe ich eine solide Grundlage in betriebswirtschaftlichen Prinzipien entwickelt, die durch einen praktischen, hands-on Ansatz in kleinen Gruppen ergänzt wurde. Das Programm legte Wert auf Fähigkeiten in Management, Finanzen und Marketing – 08/15 BWL Studium. Was es dann aber doch anders gemacht hat, waren die wechselnden praktischen Phasen und Semester. So konnte ich in sechs verschiedene Abteilungen Erfahrungen sammeln und herausfinden, wo ich am besten hin passe. Während meiner letzter praktischen Phase und späteren Rolle als Financial Analyst hab ich meine Bachelorarbeit zur Implementierung von Self-Service Business Intelligence geschrieben. Das hat mir einen guten Übergang in meinen ersten richtigen Job gewährt, da ebendiese Implementierung von Self-Service BI eines der Hauptziele in meiner späteren Rolle war.
+                Ich habe meinen BWL-Bachelor an der Leibniz Fachhochschule absolviert. Durch die Kooperation mit den den Ausbildungsbetrieben wurde ein großer Wert auf einen praktischen, hands-on Ansatz in kleinen Gruppen gelegt. Inhaltlich ging es um Fähigkeiten in Fächern wie Management, Finanzen und Marketing – also ein 08/15 BWL Studium. Was es dann aber doch anders gemacht hat, waren die praktischen Phasen im Betrieb. So konnte ich in sechs verschiedenen Abteilungen Erfahrungen sammeln und herausfinden, wo ich am besten hin passe. Während meiner letzten praktischen Phase im Finance & Controlling bei Continentals Europaweiten Vertriebsgesellschaft und späteren Rolle als Financial Analyst hab ich meine Bachelorarbeit zur Implementierung von Self-Service Business Intelligence geschrieben. Das hat mir einen guten Übergang in meinen ersten richtigen Job gewährt, da ebendiese Implementierung von Self-Service BI eines der Hauptziele in meiner späteren Rolle war.
             </span></li>
             <li onclick="toggleContent(this)">Mein Master in Digital Economy<span class="hidden-content">
-                Aktuell absolviere ich einen Master in Digital Economy an der Wirtschaftsuniversität Wien, wo ich mich mit Themen beschäftige, die IT und Wirtschaft verbinden. Von Business Process Management über Data Management bis hin zu Analytics sind die Kurse darauf ausgelegt, Leuten zu helfen wie mir, die sich zwischen Business und IT wohl fühlen. Das Studium an einer großen Universität bietet mir eine andere Perspektive im Vergleich zu meiner Zeit an einer kleinen FH. Wenn Sie interessiert sind, finden Sie das Programm über diesen <a class='link-style-1' href='https://www.wu.ac.at/en/programs/masters-programs/digital-economy' target='_blank'>Link</a>.
+                Aktuell absolviere ich einen Master in Digital Economy an der Wirtschaftsuniversität Wien, wo ich mich mit Themen beschäftige, die IT und Wirtschaft verbinden. Von Business Process Management über Data Management bis hin zu Analytics sind die Kurse darauf ausgelegt, Leuten zu helfen wie mir, die sich zwischen Business und IT wohl fühlen. Das Studium an einer großen Universität bietet mir eine spannende aber auch theoretischere Perspektive im Vergleich zu meiner Zeit an einer kleinen FH. Das Programm hab ich <a class='link-style-1' href='https://www.wu.ac.at/en/programs/masters-programs/digital-economy' target='_blank'>hier verlinkt</a>.
             </span></li>
             <li onclick="toggleContent(this)">Power BI Expertise<span class="hidden-content">
+                Power BI ist eines meiner Hauptexpertisefelder. Ich habe in den letzten drei Jahren zwischen 20-30 Dashboards gebaut. Davon waren viele Finance & Controlling Reports, wie z.B. Verkaufsreports inklusive Forecasting, G&V-Reports sowie Lager- und Abwertungsreports, aber auch für andere Abteilungen wie Operations (Verkaufsimulationen, Telefonanrufanalysen), Vertrieb (Außendienstlerreport), Revision (Revisionsfrühwarnreport) oder für abteilungsübergreifende Projekte habe ich Reports entwickelt. Ich konnte also eine tiefes Verständnis für die Anforderungen ....
+            </span></li>
+            <li onclick="toggleContent(this)">Power Automate & Power Apps Expertise<span class="hidden-content">
                 Zusätzliche Informationen zu meiner Power BI-Expertise.
             </span></li>
             <li onclick="toggleContent(this)">Projektmanagement<span class="hidden-content">
-                Ich habe in verschiedenen Projekten an der Uni und im Job mitgearbeitet und dabei praktische Erfahrungen gesammelt. Als IHK-zertifizierter Projektmanager leite ich derzeit ein Projekt mit einem crossfunktionalen und internationalen Team, was interessante Herausforderungen mit sich bringt und den Fokus auf gute Zusammenarbeit legt.
+                Ich habe in verschiedenen Projekten an der Uni und im Job mitgearbeitet und dabei praktische Erfahrungen gesammelt. Aktuell leite ich ein Projekt mit einem crossfunktionalen und internationalen Team, was interessante Herausforderungen mit sich bringt und den Fokus auf gute Zusammenarbeit legt. Neben zahlreichen Projektmanagement Kursen im akademischen und beruflichen Umfeld bin ich auch zertifizierter Projektmanager (IHK).
             </span></li>
             <li onclick="toggleContent(this)">Coding<span class="hidden-content">
-                Während meines Bachelors hatte ich wenig Kontakt mit Programmierung. Aber als Financial Analyst DWH habe ich mir SQL 'on the job' beigebracht und es dann auch täglich genutzt. In meinem Masterstudium habe ich dann R und Python für Analysen gelernt. Die Website, die Du gerade offen hast, ist mein erstes Projekt mit HTML, CSS und JavaScript.
+                Während meines Bachelors hatte ich wenig Kontakt mit Programmierung. Aber als Financial Analyst DWH habe ich mir SQL 'on the job' beigebracht und es dann auch täglich genutzt. In meinem Masterstudium habe ich dann R und Python erlernt und vor allem für Daten Analysen genutzt. Die Website, die Du gerade offen hast, ist mein erstes Projekt mit HTML, CSS und JavaScript.
             </span></li>
             <li onclick="toggleContent(this)">Und andere interessante Arbeiten<span class="hidden-content">
                 In Arbeit 🚧
@@ -135,6 +138,18 @@ function setLanguage(lang) {
     localStorage.setItem('selectedLanguage', lang);
 }
 
+// Function to update the copyright text based on screen size
+function updateCopyrightText() {
+    const copyrightElement = document.querySelector('.bottom-left span');
+    const isSmallScreen = window.innerWidth <= 38 * 16; // Assuming 1rem = 16px, adjust if needed
+
+    if (isSmallScreen) {
+        copyrightElement.innerHTML = '© 2024'; // Short version for small screens
+    } else {
+        copyrightElement.innerHTML = '© Luis Ruhländer 2024'; // Full version for larger screens
+    }
+}
+
 function toggleContent(listItem) {
     const hiddenContent = listItem.querySelector('.hidden-content');
     if (hiddenContent) {
@@ -155,10 +170,15 @@ function updateButtonStyles(lang) {
     });
 }
 
+// Load the language and update the copyright text on initial load
 function loadLanguage() {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'de'; // Default to German if not saved
     setLanguage(savedLanguage); // Set the saved or default language
+    updateCopyrightText(); // Update copyright text based on screen size
 }
+
+window.addEventListener('resize', updateCopyrightText);
+
 
 function loadContent(file, elementId) {
     fetch(file)
