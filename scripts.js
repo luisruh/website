@@ -8,6 +8,7 @@ const translations = {
         i_header: "Wer <span class='color_highlight'>ich</span> bin",
         i_content: [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+
                 "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.",
             ],
         cv_header: "Meine <span class='color_highlight'>beruflichen Erfahrungen</span>",
@@ -39,6 +40,10 @@ const translations = {
             </span></li>
         </ul>`,        
         politics_header: "Gedanken zur <span class='color_highlight'>Politik</span>",
+        politics_intro: [
+            "english Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+        ],
         politics_content: `
             <ul class='styled-list'>
             <li onclick="toggleContent(this)">In
@@ -49,7 +54,13 @@ const translations = {
 
         </ul>`,        
         disclaimer: "Ich übe nur ein bisschen Website bauen :) ",
-        back_button: `<span class="rotated-text">Geh' <button onclick="goBack()">Zurück</button></div></span>`
+        back_button: `<span class="rotated-text">Geh' <button onclick="goBack()">Zurück</button></div></span>`,
+        image_captions: {
+            img1: "Ich in professionell",
+            img2: "Ich mit meinem biggest achievement",
+            img3: "Ich in nachdenklich",
+            img4: "Ich müde vom Nachdenken",
+        },
     },
     en: {
         home: ["Start"],
@@ -90,8 +101,8 @@ const translations = {
             </span></li>
         </ul>`,        
         politics_header: "Thoughts on <span class='color_highlight'>politics</span>",
-        politics_into: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+        politics_intro: [
+            "english Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
             "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
         ],
         politics_content: `
@@ -103,7 +114,13 @@ const translations = {
                 <span class="hidden-content">🙄🙄🙄</span>
         </ul>`,
         disclaimer: "I am just practicing building websites :)",
-        back_button: `<span class="rotated-text">Go <button onclick="goBack()">Back</button></div></span>`
+        back_button: `<span class="rotated-text">Go <button onclick="goBack()">Back</button></div></span>`,
+        image_captions: {
+            img1: "Me in professional",
+            img2: "Me with my greatest achievement",
+            img3: "Me thinking hard(ly)",
+            img4: "Me tired from thinking",            
+        },
     },
 };
 
@@ -123,7 +140,13 @@ function setLanguage(lang) {
 
         { id: 'politics_header', content: translations[lang].politics_header },
         { id: 'politics_intro', content: translations[lang].politics_intro },
-        { id: 'politics_content', content: translations[lang].politics_content }
+        { id: 'politics_content', content: translations[lang].politics_content },
+
+        { id: 'image_caption_1', content: translations[lang].image_captions.img1 },
+        { id: 'image_caption_2', content: translations[lang].image_captions.img2 },
+        { id: 'image_caption_3', content: translations[lang].image_captions.img3 },
+        { id: 'image_caption_4', content: translations[lang].image_captions.img4 },
+
     ];
 
     // Loop over elements and update their content if they exist
@@ -139,6 +162,10 @@ function setLanguage(lang) {
 
     // Save the selected language in local storage
     localStorage.setItem('selectedLanguage', lang);
+
+    // Update the gallery with the selected language
+    updateImage(); // Add this line to ensure gallery caption updates with language
+
 }
 
 // Function to update the copyright text based on screen size
@@ -221,3 +248,55 @@ window.addEventListener('orientationchange', setVh);
 window.addEventListener('load', () => {
     document.body.style.overflow = 'hidden';
 });
+
+// Gallery script
+// Gallery script
+const images = [
+    "01_files/i/1.jpeg",
+    "01_files/i/2.jpg",
+    "01_files/i/3.jpeg",
+    "01_files/i/4.jpeg"
+];
+
+// Map to the image caption keys in translations directly
+const captions = [
+    'img1',  // First image
+    'img2',  // Second image
+    'img3',  // Third image
+    'img4'   // Fourth image
+];
+
+
+let currentIndex = 0;
+
+const currentImage = document.getElementById('current-image');
+const currentCaption = document.getElementById('current-caption');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+function updateImage() {
+    currentImage.src = images[currentIndex];
+
+    // Get the currently selected language dynamically from the global state
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'de';  // Default to German if not saved
+    
+    // Update the caption based on the current image and selected language
+    const captionKey = captions[currentIndex]; // Get the correct key (e.g., 'img1')
+    currentCaption.innerHTML = translations[savedLanguage].image_captions[captionKey]; // Fetch the caption
+}
+
+
+
+// Event listeners for gallery controls
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to last image
+    updateImage();
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length; // Loop to first image
+    updateImage();
+});
+
+// Call updateImage initially to set the first image and caption
+updateImage();
