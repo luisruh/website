@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="01_files/ich.png" type="image/x-icon">
-
 </head>
 <body>
 
-    <div class="top-banner"><div id="disclaimer"></div></div>
+    <div class="top-banner">
+        <div id="disclaimer"></div>
+    </div>
 
     <div class="scr_container">
-
         <div id="common-boxes"></div>
-<!-- ---------------------------------------------------------------- -->
-        <div class="content">
-            <h2 id="i_header"></h2>
-            <h3 id="i_content"></h3>
+        <h2 id="i_header"></h2>
 
+        <!-- Vertikaler Container für Text und Bilder -->
+        <div class="vertical-container">
+            <div class="content">
+                <p id="i_content">
+                    <!-- The content of the website comes from here -->
+                </p>
+            </div>
+
+            <!-- Galerie mit nur einem sichtbaren Bild -->
+            <div class="gallery">
+                <img class="gallery-item" id="current-image" src="01_files/i/1.jpeg" alt="Beschreibung des aktuellen Bildes">
+                <p id="current-caption" class="gallery-caption"></p></p>
+                <div class="gallery-controls">
+                    <button id="prev" class="control-button">❮</button>
+                    <button id="next" class="control-button">❯</button>
+                </div>
+            </div>
         </div>
-<!-- ---------------------------------------------------------------- -->
+
         <div class="corner top-left corner-vertical" id="back_button"></div>
     </div>
 
