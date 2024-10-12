@@ -60,6 +60,7 @@ h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
     position: relative;
     margin-top: calc(var(--vh) * 5); 
     overflow-y: auto; 
+
 }
 
 
@@ -70,7 +71,6 @@ h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
     font-style: normal;
     margin-top: calc(var(--vh) * 5); 
     margin-bottom: calc(var(--vh) * 5); 
-
 }
 
 @media (max-height: 38rem) or (max-width: 38rem) {
@@ -97,11 +97,11 @@ h2 {
     margin-bottom: 1rem;
 }
 
-h3 {
+p {
     font-size: 1.2rem;
     letter-spacing: 0.1em;
     line-height: 1.2;
-    font-weight: normal;
+    font-weight: italic;
     margin-bottom: 2vh;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -116,7 +116,7 @@ h3 {
     h2 {
         font-size: 2.66rem;
     }
-    h3 {
+    p {
         font-size: 1.33rem;
     }
 }
@@ -127,7 +127,7 @@ h3 {
     h2 {
         font-size: 2rem;
     }
-    h3 {
+    p {
         font-size: 1rem;
     }
 }
@@ -239,6 +239,13 @@ h3 {
 }
 
 /* ---------------------------------------------------------------- */
+@media (max-height: 38rem) or (max-width: 38rem) {
+    .pdf-viewer {
+        display: none;
+    }
+}
+
+/* ---------------------------------------------------------------- */
 
 a {
     color: inherit;
@@ -246,13 +253,13 @@ a {
 }
 
 a:hover {
-    font-style: italic;
-}
+    font-style: italic;}
 
 /* Styles 1 */
 .link-style-1 {
     color: var(--color-highlight);
 }
+
 .link-style-1:hover {
     font-weight: italic;
     cursor: pointer;
@@ -317,8 +324,73 @@ button:hover {
 }
 
 
+body {
+    font-family: Arial, sans-serif; /* Beispiel Schriftart */
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-container {
+    display: flex; /* Flexbox Layout */
+    justify-content: space-between; /* Space between the elements */
+    align-items: center; /* Center elements vertically */
+    width: 80vw; /* Default width of the container */
+    margin: 0; /* Reset margin if needed */
+    padding-bottom: 3rem; /* Reset padding if needed */
+}
+
+.gallery {
+    position: relative; /* For positioning controls */
+    width: 35vw; /* Adjust width for larger screens */
+    margin-left: 4rem; /* Optional: adjust as needed */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.gallery-item {
+    width: 100%; /* Take full width of the gallery */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 1rem; /* Optional: rounded corners */
+    display: block; /* Prevent extra space around the image */
+    margin: 0; /* Reset any margin */
+}
+
+.gallery-controls {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space between controls */
+    transform: translateY(-50%); /* Center controls */
+}
+
+.gallery-caption {
+    text-align: center; /* Center the caption */
+    font-size: 1rem;
+}
+
+.control-button {
+    background-color: rgba(255, 255, 255, 0.7); /* Light background for buttons */
+    border: none;
+    padding: 4%; /* Optional: button padding */
+    cursor: pointer;
+    font-size: 100%; /* Button size */
+    border-radius: 20%; /* Rounded corners */
+}
+
+/* Hover effects for buttons */
+.control-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Media Query for smaller screens */
 @media (max-height: 38rem) or (max-width: 38rem) {
-    .pdf-viewer {
-        display: none;
+    .vertical-container {
+        flex-direction: row; /* Arrange items horizontally */
+        flex-wrap: wrap; /* Wrap items if necessary */
+        width: 100vw; /* Full width of the screen */
+    }
+    .gallery {
+        width: 80vw; /* Full width of the container */
     }
 }
