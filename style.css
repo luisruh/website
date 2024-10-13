@@ -60,7 +60,6 @@ h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
     position: relative;
     margin-top: calc(var(--vh) * 5); 
     overflow-y: auto; 
-
 }
 
 
@@ -69,6 +68,7 @@ h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
     width: 70vw;
     padding: 0vh;
     font-style: normal;
+    font-weight: normal; 
     margin-top: calc(var(--vh) * 5); 
     margin-bottom: calc(var(--vh) * 5); 
 }
@@ -105,8 +105,6 @@ p {
     margin-bottom: 2vh;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    text-align: justify;
-
 }
 
 @media (max-height: 50rem) or (max-width: 60rem) {
@@ -296,7 +294,7 @@ button:hover {
 }
 
 .styled-list li {
-    position: relative; /* Ensure the hidden content is positioned correctly */
+    position: relative;
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
     background-color: var(--color-list-bg);
@@ -310,7 +308,7 @@ button:hover {
 }
 
 .styled-list li.open .hidden-content {
-    display: block;
+    display: left;
     transition: all 0.3s ease;
 }
 
@@ -321,6 +319,7 @@ button:hover {
     font-size: 1rem;
     line-height: 1.2rem;
     text-align: justify;
+    font-weight: normal;
 }
 
 
@@ -350,7 +349,7 @@ body {
     width: 100%; /* Take full width of the gallery */
     height: auto; /* Maintain aspect ratio */
     border-radius: 1rem; /* Optional: rounded corners */
-    display: block; /* Prevent extra space around the image */
+    display: left; /* Prevent extra space around the image */
     margin: 0; /* Reset any margin */
 }
 
@@ -392,5 +391,7 @@ body {
     }
     .gallery {
         width: 80vw; /* Full width of the container */
+        margin-left: 10vw; /* Optional: adjust as needed */
+        align-self: center;
     }
 }
