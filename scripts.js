@@ -167,7 +167,6 @@ function setLanguage(lang) {
     updateImage(); // Add this line to ensure gallery caption updates with language
 
 }
-
 // Function to update the copyright text based on screen size
 function updateCopyrightText() {
     const copyrightElement = document.querySelector('.bottom-left span');
@@ -179,6 +178,12 @@ function updateCopyrightText() {
         copyrightElement.innerHTML = '© Luis Ruhländer 2024'; // Full version for larger screens
     }
 }
+
+// Call the function when the window is resized and when page loads
+window.addEventListener('resize', updateCopyrightText);
+window.addEventListener('load', updateCopyrightText);
+document.addEventListener('DOMContentLoaded', updateCopyrightText);
+
 
 function toggleContent(listItem) {
     const hiddenContent = listItem.querySelector('.hidden-content');
