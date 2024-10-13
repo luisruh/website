@@ -257,7 +257,7 @@ window.addEventListener('load', () => {
 // Gallery script
 // Gallery script
 const images = [
-    "01_files/i/1.jpeg",
+    "01_files/i/1.jpg",
     "01_files/i/2.jpg",
     "01_files/i/3.jpeg",
     "01_files/i/4.jpeg"
