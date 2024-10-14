@@ -167,11 +167,17 @@ function setLanguage(lang) {
     updateImage(); // Add this line to ensure gallery caption updates with language
 
 }
-// Function to update the copyright text based on screen size
+
 function updateCopyrightText() {
     const copyrightElement = document.querySelector('.bottom-left span');
-    const isSmallScreen = window.innerWidth <= 38 * 16; // Assuming 1rem = 16px, adjust if needed
-
+    
+    if (!copyrightElement) {
+        // Retry the function after a short delay if the element is not yet available
+        setTimeout(updateCopyrightText, 100); // Retry in 100ms
+        return;
+    }
+    
+    const isSmallScreen = window.innerWidth <= 38 * 16; // Adjust if needed
     if (isSmallScreen) {
         copyrightElement.innerHTML = '© 2024'; // Short version for small screens
     } else {
@@ -179,10 +185,11 @@ function updateCopyrightText() {
     }
 }
 
-// Call the function when the window is resized and when page loads
+// Call updateCopyrightText on resize and after DOM is loaded
 window.addEventListener('resize', updateCopyrightText);
-window.addEventListener('load', updateCopyrightText);
-document.addEventListener('DOMContentLoaded', updateCopyrightText);
+document.addEventListener('DOMContentLoaded', () => {
+    updateCopyrightText(); // Ensure it runs on load
+});
 
 
 function toggleContent(listItem) {
