@@ -107,6 +107,12 @@ p {
     margin-bottom: 1rem;
 }
 
+.right-align {
+    display: block;       /* Macht das Element zu einem Block, sodass text-align wirkt */
+    text-align: right;    /* Richtet den Text rechtsbündig aus */
+}
+
+
 @media (max-height: 50rem) or (max-width: 60rem) {
     h1 {
         font-size: 4rem;
@@ -318,7 +324,7 @@ button:hover {
     width: 100%;
     font-size: 1rem;
     line-height: 1.2rem;
-    text-align: justify;
+    text-align: left;
     font-weight: normal;
 }
 
@@ -381,6 +387,14 @@ body {
 .control-button:hover {
     background-color: rgba(255, 255, 255, 1);
 }
+
+.gallery .gallery-item {    
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;       /* Ensure the image fills the square area */
+    display: block;          /* Ensure proper layout */
+    margin: 0 auto;          /* Center-align if needed */
+}
+
 
 /* Media Query for smaller screens */
 @media (max-height: 38rem) or (max-width: 38rem) {
