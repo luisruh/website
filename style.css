@@ -337,7 +337,7 @@ body {
 
 .vertical-container {
     display: flex; /* Flexbox Layout */
-    justify-content: space-between; /* Space between the elements */
+    justify-content: center; /* Center elements horizontally */
     align-items: center; /* Center elements vertically */
     width: 80vw; /* Default width of the container */
     margin: 0; /* Reset margin if needed */
