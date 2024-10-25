@@ -405,7 +405,9 @@ body {
     }
     .gallery {
         width: 80vw; /* Full width of the container */
-        margin-left: 10vw; /* Optional: adjust as needed */
+        margin-left: 0vw; /* Optional: adjust as needed */
         align-self: center;
+        margin-left: 0rem; /* Optional: adjust as needed */
+
     }
 }
