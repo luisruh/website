@@ -7,9 +7,14 @@ const translations = {
         ],
         i_header: "Wer <span class='color_highlight'>ich</span> bin",
         i_content: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+                "Luis, geboren 1999 in Hannover, aktuell wohnhaft in Wien.",
+                "Ich finde ich bin ein sehr hilfsbereiter, offener und freundlicher Mensch - auch wenn mir die Freundlichkeit nicht immer ins Gesicht geschrieben ist.",
 
-                "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.",
+                "Ich bin sehr begeisterungsfähig und neugierig, lerne gerne neue Sachen und brauche immer ein paar Herausforderungen in meinem Leben. Wenn die Herausforderungen auf der Arbeit oder in der Uni fehlen, such ich mir eigene - wie zum Beispiel eine Website bauen. Ich weiß wirklich noch nicht wofür diese Website mal gut sein wird, aber ich wollte schon immer mal eine bauen - ab und an muss ich meine Kreativität herausfordern.",
+
+                "Neben dem beruflichen und akademischen Zeugs das ich so vollbracht hab (mehr dazu <a class='link-style-1' href=\"jb_cv.html\">hier</a>), übe ich mich in verschiedenen Sportarten. Mit großem Abstand die Nummer Eins ist Fußball, darüber hinaus spiel ich aber auch gern Basketball, gehe joggen oder schwimmen. Ich lese auch gern, möglichst wenig Spannung, sowas wie historische Romane find ich super und koche viel und gern. Und ich … ich glaub das reicht erstmal, nicht dass meine Website noch langweilig wird.",
+
+                "<span class='right-align'~ 10/2024"
             ],
         cv_header: "Meine <span class='color_highlight'>beruflichen Erfahrungen</span>",
         cv_content: [
@@ -69,8 +74,11 @@ const translations = {
         ],
         i_header: "Who <span class='color_highlight'>I</span> am",
         i_content: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
-                "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+                "Luis, born in 1999 in Hannover, currently living in Vienna.",
+                "I like to think of myself as a very helpful, open, and friendly person – though I may not always wear that friendliness on my face.",
+                "I'm enthusiastic and curious, always eager to learn new things, and I need a few challenges in my life. If there aren’t enough at work or university, I find my own – like building this website. Honestly, I’m not quite sure yet what purpose it will serve, but I’ve always wanted to make one. Every now and then, I just need to give my creativity a workout.",
+                "Apart from all the professional and academic stuff I’ve done (more about that <a class='link-style-1' href=\"jb_cv.html\">here</a>), I enjoy various sports. Football is by far my number one, but I also like playing basketball, going for a run, or swimming. I enjoy reading too, ideally without too much suspense – historical novels are my thing. I also cook a lot and really enjoy it. And I… well, I think that’s enough for now – wouldn’t want my website to get too boring!",
+                "<span class='right-align'>~ 10/2024"  
             ],
         cv_header: "My <span class='color_highlight'>professional experiences</span>",
         cv_content: [
@@ -261,7 +269,6 @@ window.addEventListener('load', () => {
     document.body.style.overflow = 'hidden';
 });
 
-// Gallery script
 // Gallery script
 const images = [
     "01_files/i/1.jpg",
