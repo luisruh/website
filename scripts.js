@@ -14,7 +14,7 @@ const translations = {
 
                 "Neben dem beruflichen und akademischen Zeugs das ich so vollbracht hab (mehr dazu <a class='link-style-1' href=\"jb_cv.html\">hier</a>), übe ich mich in verschiedenen Sportarten. Mit großem Abstand die Nummer Eins ist Fußball, darüber hinaus spiel ich aber auch gern Basketball, gehe joggen oder schwimmen. Ich lese auch gern, möglichst wenig Spannung, sowas wie historische Romane find ich super und koche viel und gern. Und ich … ich glaub das reicht erstmal, nicht dass meine Website noch langweilig wird.",
 
-                "<span class='right-align'~ 10/2024"
+                "<span class='right-align'>~ 10/2024"  
             ],
         cv_header: "Meine <span class='color_highlight'>beruflichen Erfahrungen</span>",
         cv_content: [
