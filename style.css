@@ -35,7 +35,7 @@ html, body {
 
 /* Clean font for all text except headers */
 h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
-    font-family: var(--font-cool); /* Keep the header font */
+    font-family: var(--font-cool); 
 }
 
 .no_scr_container {
@@ -43,10 +43,9 @@ h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(var(--vh) * 95); 
+    min-height: calc(var(--vh) * 100); 
     padding: 1.25rem;
     position: relative;
-    margin-top: calc(var(--vh) * 5); 
     overflow: hidden;
 }
 
@@ -55,13 +54,17 @@ h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: calc(var(--vh) * 95);
+    min-height: calc(var(--vh) * 100);
     padding: 1.25rem;
     position: relative;
-    margin-top: calc(var(--vh) * 5); 
     overflow-y: auto; 
 }
 
+.scr_container:not(:first-child),
+.no_scr_container:not(:first-child) {
+    min-height: calc(var(--vh) * 95); 
+    margin-top: calc(var(--vh) * 5); 
+}
 
 .content {
     margin: 0 auto;
@@ -82,7 +85,6 @@ h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
 h1 {
     font-size: 6rem;
     letter-spacing: 0.1em;
-    line-height: 1.2;
     font-weight: normal;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -91,20 +93,15 @@ h1 {
 h2 {
     font-size: 4rem;
     letter-spacing: 0.1em;
-    line-height: 1.2;
     font-weight: normal;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 p {
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
-    font-weight: italic;
-    margin-bottom: 2vh;
+    font-weight: normal;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .right-align {
@@ -201,7 +198,7 @@ p {
 }
 
 @media (max-height: 38rem) or (max-width: 38rem) {
-    .top-left {
+.top-left {
         align-items: start;
         top: calc(var(--vh) * 1);
         transform: rotate(0deg);
@@ -310,7 +307,6 @@ button:hover {
     width: 100%;
     cursor: pointer;
     text-align: left;
-
 }
 
 .styled-list li.open .hidden-content {
@@ -323,7 +319,6 @@ button:hover {
     margin-top: 0.5rem;
     width: 100%;
     font-size: 1rem;
-    line-height: 1.2rem;
     text-align: left;
     font-weight: normal;
 }

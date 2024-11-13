@@ -1,24 +1,23 @@
 
+// option z für line break
 const translations = {
     de: {
         home: ["Home"],
         main_intro_sentence: [
-            "Wer <a href='ja_i.html' class='link-style-1'>ich</a> bin, meine<a href='jb_cv.html' class='link-style-1'> beruflichen Erfahrungen </a> und Gedanken zur<a href='jc_politics.html' class='link-style-1'> Politik</a>",
+            "Wer <a href='ja_i.html' class='link-style-1'>ich</a> bin, meine<a href='jb_cv.html' class='link-style-1'> beruflichen Erfahrungen </a> und ein paar Gedanken zur<a href='jc_politics.html' class='link-style-1'> Politik</a>",
         ],
         i_header: "Wer <span class='color_highlight'>ich</span> bin",
         i_content: [
                 "Luis, geboren 1999 in Hannover, aktuell wohnhaft in Wien.",
                 "Ich finde ich bin ein sehr hilfsbereiter, offener und freundlicher Mensch - auch wenn mir die Freundlichkeit nicht immer ins Gesicht geschrieben ist.",
-
-                "Ich bin sehr begeisterungsfähig und neugierig, lerne gerne neue Sachen und brauche immer ein paar Herausforderungen in meinem Leben. Wenn die Herausforderungen auf der Arbeit oder in der Uni fehlen, such ich mir eigene - wie zum Beispiel eine Website bauen. Ich weiß wirklich noch nicht wofür diese Website mal gut sein wird, aber ich wollte schon immer mal eine bauen - ab und an muss ich meine Kreativität herausfordern.",
-
-                "Neben dem beruflichen und akademischen Zeugs das ich so vollbracht hab (mehr dazu <a class='link-style-1' href=\"jb_cv.html\">hier</a>), übe ich mich in verschiedenen Sportarten. Mit großem Abstand die Nummer Eins ist Fußball, darüber hinaus spiel ich aber auch gern Basketball, gehe joggen oder schwimmen. Ich lese auch gern, möglichst wenig Spannung, sowas wie historische Romane find ich super und koche viel und gern. Und ich … ich glaub das reicht erstmal, nicht dass meine Website noch langweilig wird.",
-
+                "Ich bin sehr begeisterungsfähig und neugierig, lerne gerne neue Sachen und brauche immer ein paar Herausforderungen in meinem Leben. Wenn diese auf der Arbeit oder in der Uni fehlen, such ich mir eigene - wie zum Beispiel diese Website bauen. Ich weiß wirklich noch nicht, wofür diese Website mal gut sein wird, aber ich wollte schon immer mal eine bauen – außerdem machts Spaß meine Kreativität ein bisschen herauszufordern.",
+                "Neben dem beruflichen und akademischen Zeugs das ich so vollbracht hab (mehr dazu <a class='link-style-1' href=\"jb_cv.html\">hier</a>), übe ich mich in verschiedenen Sportarten. Mit großem Abstand die Nummer Eins ist Fußball, darüber hinaus spiel ich aber auch gern Basketball, gehe joggen oder schwimmen. Ich lese auch gern, möglichst wenig Spannung, sowas wie historische Romane find ich super. Und ich koche viel und gern. Und ich … glaub das reicht erstmal, nicht dass meine Website noch langweilig wird.",
                 "<span class='right-align'>~ 10/2024"  
             ],
         cv_header: "Meine <span class='color_highlight'>beruflichen Erfahrungen</span>",
         cv_content: [
-            "Bisher habe ich meine gesamte berufliche Karriere bei Continental verbracht – abgesehen von ein paar Schuljobs! Begonnen habe ich mit meinem Dualen Studium, das zwischen drei Monaten Fachhochschule und drei Monaten praktischen Phasen wechselte, wobei ich in verschiedenen Abteilungen praktische Erfahrungen sammelte. Am Ende meines Studiums wechselte ich in meinen ersten Job als <em>Financial Analyst Data Warehouse</em>, wo ich für Teile des Finanzreportings, Automatisierungen von Finance & Controlling Prozessen und den Aufbau von Dashboards für viele Abteilungen verantwortlich war! Nach zweieinhalb Jahren auf dieser Stelle bin ich nach Wien gezogen, um Teilzeit als <em>Controlling Analyst</em> bei ContiTrade Austria zu arbeiten. Hier kann ich meine Expertise aus meinem vorherigen Job anwenden und gleichzeitig das lokale Controlling kennenlernen. Im Fokus steht bei mir aber aktuell mein Master-Studium Digital Economy an der WU. Unten hab' ich ein paar details festgehalten zu meinen Fachgebieten und akademischen Leistungen. Darüber hinaus habe ich hier <a class='link-style-1' onclick=\"window.location.href='01_files/cv_private.pdf'\" download>meinen Lebenslauf hinterlegt</a>."
+            "Bisher habe ich meine gesamte berufliche Karriere bei Continental verbracht – abgesehen von ein paar Schuljobs! Begonnen habe ich mit meinem Dualen Studium, das zwischen drei Monaten Fachhochschule und drei Monaten praktischen Phasen wechselte, wobei ich in verschiedenen Abteilungen praktische Erfahrungen sammelte. Am Ende meines Studiums wechselte ich in meinen ersten Job als <em>Financial Analyst Data Warehouse</em>, wo ich für Teile des Finanzreportings, Automatisierungen von Finance & Controlling Prozessen und den Aufbau von Dashboards für viele Abteilungen verantwortlich war!",
+            "Nach zweieinhalb Jahren auf dieser Stelle bin ich nach Wien gezogen, um Teilzeit als <em>Controlling Analyst</em> bei ContiTrade Austria zu arbeiten. Hier kann ich meine Expertise aus meinem vorherigen Job anwenden und gleichzeitig das lokale Controlling kennenlernen. Im Fokus steht bei mir aber aktuell mein Master-Studium Digital Economy an der WU. Unten hab' ich ein paar details festgehalten zu meinen Fachgebieten und akademischen Leistungen. Darüber hinaus habe ich hier <a class='link-style-1' onclick=\"window.location.href='01_files/cv_private.pdf'\" download>meinen Lebenslauf hinterlegt</a>."
         ],
         cv_projects: `
         <ul class='styled-list'>
@@ -41,22 +40,29 @@ const translations = {
                 Während meines Bachelors hatte ich wenig Kontakt mit Programmierung. Aber als Financial Analyst DWH habe ich mir SQL 'on the job' beigebracht und es dann auch täglich genutzt. In meinem Masterstudium habe ich dann R und Python erlernt und vor allem für Daten Analysen genutzt. Die Website, die Du gerade offen hast, ist mein erstes Projekt mit HTML, CSS und JavaScript.
             </span></li>
             <li onclick="toggleContent(this)">Und andere interessante Arbeiten<span class="hidden-content">
-                In Arbeit 🚧
+                Mehr ist immer in Arbeit 😏 🚧
             </span></li>
         </ul>`,        
         politics_header: "Gedanken zur <span class='color_highlight'>Politik</span>",
         politics_intro: [
-            "english Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
-            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+            "Ich bin ein politisch interessierter Mensch. Ich lese viel und höre mir super viele Podcasts an. Aber mit den ganzen infos mach ich bisher nichts, außer eine enorm fundierte Wahlentscheidung zu treffen alle vier Jahre.",
+            "Ich bilde mir ein, komplexe Themengebiete ganz gut zusammenfassen zu können. Meine beruflichen Positionen zwischen IT/Daten und Business Usern haben mich auf die Idee gebracht, politische Zahlen und Daten besser aufzubereiten – so, dass dabei vielleicht neue Blickwinkel entstehen. Aber als ich damit angefangen hab, ist mir aufgefallen, dass es solche datengetriebenen Websites inklusiver Dashboards und Grafiken bereits gibt. Daher möchte ich auf diesen Websites aufbauen und einfach meine Erkenntnisse hinzufügen.",    
         ],
         politics_content: `
             <ul class='styled-list'>
             <li onclick="toggleContent(this)">In
-                <span class="hidden-content"> Also noch nicht fertig Mensch </span>
+                <span class="hidden-content"> Ich will mir die folgenden Links anschauen: 
+                <a class='link-style-1' href='https://www.dashboard-deutschland.de/wertpapiere_finanzen/oeffentliche_finanzen
+                ' target='_blank'>Dashboard Deutschland</a>, 
+                <a class='link-style-1' href='https://service.destatis.de/DE/vgr-monitor-deutschland/staat.html
+                ' target='_blank'>Volkswirtschaftlichen Gesamtrechnungen Monitor</a>, 
+                <a class='link-style-1' href='https://www.bundeshaushalt.de/DE/Bundeshaushalt-digital/bundeshaushalt-digital.html
+                ' target='_blank'>Bundeshaushalt Digital als Dashboard</a>.
+                Aber dazu bin ich noch nicht gekommen. </span>
             </li>
             <li onclick="toggleContent(this)">Bearbeitung
-                <span class="hidden-content"> 🙄🙄🙄 </span>
-
+                <span class="hidden-content"> Noch nicht zu gekommen hab ich gesagt 🙄🙄🙄 </span>
+            </li>
         </ul>`,        
         disclaimer: "Ich übe nur ein bisschen Website bauen :) ",
         back_button: `<span class="rotated-text">Geh' <button onclick="goBack()">Zurück</button></div></span>`,
@@ -70,13 +76,13 @@ const translations = {
     en: {
         home: ["Start"],
         main_intro_sentence: [
-            "Who <a href='ja_i.html' class='link-style-1'>I</a> am, my<a href='jb_cv.html' class='link-style-1'> professional experiences</a>, and thoughts on<a href='jc_politics.html' class='link-style-1'> politics</a>"
+            "Who <a href='ja_i.html' class='link-style-1'>I</a> am, my<a href='jb_cv.html' class='link-style-1'> professional experiences</a>, and some thoughts on<a href='jc_politics.html' class='link-style-1'> politics</a>"
         ],
         i_header: "Who <span class='color_highlight'>I</span> am",
         i_content: [
                 "Luis, born in 1999 in Hannover, currently living in Vienna.",
                 "I like to think of myself as a very helpful, open, and friendly person – though I may not always wear that friendliness on my face.",
-                "I'm enthusiastic and curious, always eager to learn new things, and I need a few challenges in my life. If there aren’t enough at work or university, I find my own – like building this website. Honestly, I’m not quite sure yet what purpose it will serve, but I’ve always wanted to make one. Every now and then, I just need to give my creativity a workout.",
+                "I'm enthusiastic and curious, always eager to learn new things, and it seems like I always need a few challenges in my life. If there aren’t enough at work or university, I find my own – like building this website. Honestly, I’m not quite sure yet what purpose it will serve, but I’ve always wanted to make one. It is also nice to give my creativity a small workout.",
                 "Apart from all the professional and academic stuff I’ve done (more about that <a class='link-style-1' href=\"jb_cv.html\">here</a>), I enjoy various sports. Football is by far my number one, but I also like playing basketball, going for a run, or swimming. I enjoy reading too, ideally without too much suspense – historical novels are my thing. I also cook a lot and really enjoy it. And I… well, I think that’s enough for now – wouldn’t want my website to get too boring!",
                 "<span class='right-align'>~ 10/2024"  
             ],
@@ -105,22 +111,16 @@ const translations = {
                 I didn’t get much exposure to coding during my Bachelor's, but I taught myself SQL on the job, where I ended up using it daily. This hands-on experience helped me develop a solid understanding of working with databases. In my Master’s, I’ve picked up R and Python for analytics. Coding has become something I’m genuinely interested in, and I this website you are currently looking at is my first project with with HTML, CSS, and JavaScript.
             </span></li>
             <li onclick="toggleContent(this)">And Other Interesting Work<span class="hidden-content">
-                Under Construction 🚧
+                More is always under Construction 😏 🚧
             </span></li>
         </ul>`,        
         politics_header: "Thoughts on <span class='color_highlight'>politics</span>",
         politics_intro: [
-            "english Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
-            "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. ",    
+            "I'm very interested in politics. I read a lot and listen to tons of podcasts. But so far, I don't really do much with all this information, except make a well-informed voting decision every four years.",
+            "I like to think I'm pretty good at summarizing complex topics. My roles bridging IT/data and business users gave me the idea of presenting political numbers and data in a way that brings fresh perspectives. But as I got into it, I realized there are already some really exciting websites out there, complete with dashboards and graphics. So, I’d rather build on what these sites offer and just share my own insights.",    
+            "For now, I won’t be translating my findings, as most of them are specific to Germany.",    
         ],
-        politics_content: `
-            <ul class='styled-list'>
-            <li onclick="toggleContent(this)">In
-                <span class="hidden-content">Told you duh</span>
-            </li>
-            <li onclick="toggleContent(this)">Progress
-                <span class="hidden-content">🙄🙄🙄</span>
-        </ul>`,
+        politics_content: ``,
         disclaimer: "I am just practicing building websites :)",
         back_button: `<span class="rotated-text">Go <button onclick="goBack()">Back</button></div></span>`,
         image_captions: {
@@ -147,7 +147,7 @@ function setLanguage(lang) {
         { id: 'cv_projects', content: translations[lang].cv_projects },
 
         { id: 'politics_header', content: translations[lang].politics_header },
-        { id: 'politics_intro', content: translations[lang].politics_intro },
+        { id: 'politics_intro', content: translations[lang].politics_intro.join('<br><br>') },
         { id: 'politics_content', content: translations[lang].politics_content },
 
         { id: 'image_caption_1', content: translations[lang].image_captions.img1 },
