@@ -46,7 +46,7 @@ const translations = {
         politics_header: "Gedanken zur <span class='color_highlight'>Politik</span>",
         politics_intro: [
             "Ich bin ein politisch interessierter Mensch. Ich lese viel und höre mir super viele Podcasts an. Aber mit den ganzen infos mach ich bisher nichts, außer eine enorm fundierte Wahlentscheidung zu treffen alle vier Jahre.",
-            "Ich bilde mir ein, komplexe Themengebiete ganz gut zusammenfassen zu können. Meine beruflichen Positionen zwischen IT/Daten und Business Usern haben mich auf die Idee gebracht, politische Zahlen und Daten besser aufzubereiten – so, dass dabei vielleicht neue Blickwinkel entstehen. Aber als ich damit angefangen hab, ist mir aufgefallen, dass es solche datengetriebenen Websites inklusiver Dashboards und Grafiken bereits gibt. Daher möchte ich auf diesen Websites aufbauen und einfach meine Erkenntnisse hinzufügen.",    
+            "Ich bilde mir ein, komplexe Themengebiete ganz gut zusammenfassen zu können. Meine beruflichen Positionen zwischen IT/Daten und Business Usern haben mich auf die Idee gebracht, politische Zahlen und Daten besser aufzubereiten – so, dass dabei vielleicht neue Blickwinkel entstehen. Aber als ich damit angefangen hab, ist mir aufgefallen, dass es solche analytischen und datengetriebenen Websites inklusive Dashboards und Grafiken bereits gibt. Daher möchte ich auf diesen Websites aufbauen und einfach meine Erkenntnisse hinzufügen.",    
         ],
         politics_content: `
             <ul class='styled-list'>
