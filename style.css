@@ -14,7 +14,7 @@
     --color-list-bg: #ffffff;
     --vh: 1vh;
 
-    --font-clean: 'Calibri', serif; /* Cleaner font for body text */
+    --font-clean: 'Playfair Display', serif; /* Cleaner font for body text */
     --font-cool: 'Playfair Display', serif; /* Cooler font for headers and corner items */
 }
 
@@ -70,7 +70,6 @@ h1, h2, .top-left, .top-right, .bottom-left, .bottom-right {
     margin: 0 auto;
     width: 70vw;
     padding: 0vh;
-    font-style: normal;
     font-weight: normal; 
     margin-top: calc(var(--vh) * 5); 
     margin-bottom: calc(var(--vh) * 5); 
@@ -325,7 +324,7 @@ button:hover {
 
 
 body {
-    font-family: Arial, sans-serif; /* Beispiel Schriftart */
+    font-family: var(--font-clean), sans-serif; /* Beispiel Schriftart */
     margin: 0;
     padding: 0;
 }
