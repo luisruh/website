@@ -308,20 +308,55 @@ function drawBarChart() {
   const metricKey = document.getElementById('barMetricSelect').value || barMetrics[0][0];
   const metric = barMetrics.find(([key]) => key === metricKey) || barMetrics[0];
   const [, label, getter] = metric;
-  const rows = filtered.map(d => ({ name: d.name, value: Number(getter(d) || 0) })).sort((a,b) => b.value - a.value);
+
+  const rows = filtered
+    .map(d => ({ name: d.name, value: Number(getter(d) || 0) }))
+    .sort((a, b) => b.value - a.value);
+
+  const chartEl = document.getElementById('barChart');
+
+  // Mehr Höhe bei vielen Substanzen
+  chartEl.style.height = `${Math.max(420, 150 + rows.length * 42)}px`;
+
+  const yValues = rows.map(r => r.name).reverse();
+
+  // Sichtbarer Abstand zwischen Label und Balken
+  const labelGap = '\u00A0\u00A0\u00A0\u00A0';
+
   const trace = {
-    type: 'bar', orientation: 'h',
-    y: rows.map(r => r.name).reverse(),
+    type: 'bar',
+    orientation: 'h',
+    y: yValues,
     x: rows.map(r => r.value).reverse(),
     text: rows.map(r => r.value).reverse(),
     textposition: 'auto',
+    cliponaxis: false,
     marker: { color: 'rgba(159,183,255,.82)' },
     hovertemplate: '%{y}<br>' + label + ': %{x}<extra></extra>'
   };
+
   const layout = baseLayout();
-  layout.margin = { l: 88, r: 14, t: 6, b: 36 };
+
+  layout.margin = {
+    l: isMobile() ? 150 : 180,
+    r: 24,
+    t: 6,
+    b: 42
+  };
+
   layout.xaxis.title = label;
-  layout.yaxis.automargin = true;
+
+  // Wichtig: keine xaxis.domain-Verschiebung mehr
+  delete layout.xaxis.domain;
+
+  layout.yaxis.automargin = false;
+  layout.yaxis.tickmode = 'array';
+  layout.yaxis.tickvals = yValues;
+  layout.yaxis.ticktext = yValues.map(name => name + labelGap);
+  layout.yaxis.tickfont = {
+    size: isMobile() ? 13 : 15
+  };
+
   Plotly.react('barChart', [trace], layout, plotConfig);
 }
 
@@ -392,8 +427,8 @@ function drawAliasNetwork() {
     return { name, x: cx + Math.cos(a) * radius, y: cy + Math.sin(a) * radius };
   });
   const lines = nodes.map(n => `<line class="net-line" x1="${cx}" y1="${cy}" x2="${n.x}" y2="${n.y}"/>`).join('');
-  const satellites = nodes.map(n => `<circle class="net-node" cx="${n.x}" cy="${n.y}" r="${nodeRadius(n.name)}"></circle><text class="net-label small" x="${n.x}" y="${n.y}">${escapeSvg(shorten(n.name,18))}</text>`).join('');
-  el.innerHTML = `<svg viewBox="0 0 ${width} ${height}" aria-label="Aliasnetz"><g>${lines}${satellites}<circle class="net-center" cx="${cx}" cy="${cy}" r="54"></circle><text class="net-label" x="${cx}" y="${cy-8}">${escapeSvg(shorten(d.name,18))}</text><text class="net-label small" x="${cx}" y="${cy+12}">${aliases.length} Alias</text></g></svg>`;
+  const satellites = nodes.map(n => `<text class="net-label small" x="${n.x}" y="${n.y}">${escapeSvg(shorten(n.name,18))}</text>`).join('');
+  el.innerHTML = `<svg viewBox="0 0 ${width} ${height}" aria-label="Aliasnetz"><g>${lines}${satellites}<text class="net-label" x="${cx}" y="${cy-8}">${escapeSvg(shorten(d.name,18))}</text><text class="net-label small" x="${cx}" y="${cy+12}">${aliases.length} Alias</text></g></svg>`;
 }
 
 function drawEffectMap() {
@@ -481,8 +516,13 @@ function renderCards() {
 }
 
 function metricLine(label, value) {
+  const shortLabels = {
+    'Chronisch körperlich': 'Chron. körperlich',
+    'Euphorie/Empathie': 'Euphorie'
+  };
+  const displayLabel = shortLabels[label] || label;
   const pct = Math.max(0, Math.min(100, Number(value || 0) * 20));
-  return `<div class="metric-line"><div class="metric-label">${escapeHtml(label)}</div><div class="mini-bar"><span style="width:${pct}%"></span></div><div class="metric-value">${escapeHtml(value || 0)}/5</div></div>`;
+  return `<div class="metric-line"><div class="metric-label">${escapeHtml(displayLabel)}</div><div class="mini-bar"><span style="width:${pct}%"></span></div><div class="metric-value">${escapeHtml(value || 0)}/5</div></div>`;
 }
 
 function drawInteractions() {
