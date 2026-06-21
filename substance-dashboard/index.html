@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Substance Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Private Mock-up</p>
+      <h1>Substance Dashboard</h1>
+      <p class="subtitle">Klassifikation, Herkunft, Alias-Namen, Wirkprofile und Risiko-Scores. Die Daten sind aktuell Platzhalter und müssen später mit Quellen geprüft werden.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>
+        Suche
+        <input id="searchInput" type="search" placeholder="z. B. Koks, Cocastrauch, Stimulans" />
+      </label>
+      <label>
+        Hauptwirkung
+        <select id="effectFilter"></select>
+      </label>
+      <label>
+        Ursprung
+        <select id="originFilter"></select>
+      </label>
+      <div class="control-wide substance-filter-box">
+        <div class="substance-filter-header">
+          <div>
+            <strong>Substanzen filtern</strong>
+            <p>Ein- oder ausblenden. Gilt für alle Grafiken und Steckbriefe.</p>
+          </div>
+          <div class="inline-actions">
+            <button id="selectAllSubstances" type="button" class="mini-button">Alle wählen</button>
+            <button id="clearAllSubstances" type="button" class="mini-button">Alle abwählen</button>
+          </div>
+        </div>
+        <details class="substance-picker">
+          <summary>Auswahl anzeigen</summary>
+          <div id="substanceFilterSummary" class="compare-summary"></div>
+          <div id="substanceFilterOptions" class="compare-options substance-options"></div>
+        </details>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Dashboard-Bereiche">
+      <button class="tab-button active" data-tab="chartsTab" type="button">Grafiken</button>
+      <button class="tab-button" data-tab="profilesTab" type="button">Steckbriefe</button>
+      <button class="tab-button" data-tab="definitionsTab" type="button">Definitionen</button>
+    </nav>
+
+    <section id="chartsTab" class="tab-panel active">
+      <section class="chart-grid">
+        <div class="chart-card full">
+          <div class="chart-header stacked">
+            <div>
+              <h2>Alias-Netz</h2>
+              <p>Alternative Namen werden auf eine Substanz vereinheitlicht.</p>
+            </div>
+            <select id="aliasSelect"></select>
+          </div>
+          <div id="aliasNetwork" class="network"></div>
+        </div>
+
+        <div class="chart-card full">
+          <div class="chart-header">
+            <div>
+              <h2>Ranking</h2>
+              <p>Alle gefilterten Substanzen nach ausgewählter Metrik. Das Dropdown ist in Gefährlichkeitsdimensionen und Wirkprofil-Dimensionen gruppiert.</p>
+            </div>
+            <select id="barMetricSelect"></select>
+          </div>
+          <div id="barChart" class="chart"></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header stacked">
+            <div>
+              <h2>Radar: Gefährlichkeit</h2>
+              <p>Körperliche, psychische und soziale Risikodimensionen.</p>
+            </div>
+            <div class="compare-box">
+              <div class="compare-label">Vergleichsauswahl für beide Radar-Charts (max. 4)</div>
+              <details class="compare-picker">
+                <summary>Substanzen auswählen</summary>
+                <div id="compareSummary" class="compare-summary"></div>
+                <div id="compareOptions" class="compare-options"></div>
+              </details>
+            </div>
+          </div>
+          <div id="riskRadarChart" class="chart"></div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header stacked">
+            <div>
+              <h2>Radar: Wirkprofil</h2>
+              <p>Mehrdimensionale Wirkstärke als grobe Mock-up-Skala.</p>
+            </div>
+          </div>
+          <div id="effectRadarChart" class="chart"></div>
+        </div>
+
+        <div class="chart-card full">
+          <div class="chart-header">
+            <div>
+              <h2>Wirkprofil-Map</h2>
+              <p>Die Position zeigt das Wirkprofil über mehrere Dimensionen. Eine Substanz kann mehrere Wirkungen gleichzeitig haben und in unterschiedlicher Stärke ausprägen.</p>
+            </div>
+          </div>
+          <div id="categoryNetwork" class="network large"></div>
+        </div>
+
+        <div class="chart-card full">
+          <div class="chart-header">
+            <h2>Risiko-Landkarte</h2>
+            <p>X = akuter körperlicher Schaden, Y = psychisches Risiko, Größe = Abhängigkeit. Labels werden automatisch versetzt, damit sie sich möglichst wenig überlappen.</p>
+          </div>
+          <div id="scatterChart" class="chart"></div>
+        </div>
+
+        <div class="chart-card full">
+          <div class="chart-header">
+            <h2>Risiko-Heatmap</h2>
+            <p>Vergleich der Substanzen über mehrere Bewertungsdimensionen.</p>
+          </div>
+          <div id="heatmapChart" class="chart tall"></div>
+        </div>
+      </section>
+    </section>
+
+    <section id="profilesTab" class="tab-panel">
+      <div class="section-header">
+        <h2>Steckbriefe</h2>
+        <p id="resultInfo"></p>
+      </div>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section id="definitionsTab" class="tab-panel">
+      <section class="info-grid definitions-only">
+        <article class="info-card">
+          <h2>Skala 1–5</h2>
+          <p><strong>1</strong> = niedrig / kaum ausgeprägt · <strong>3</strong> = mittel · <strong>5</strong> = hoch / stark ausgeprägt.</p>
+          <p>Bei Gefährlichkeitsdimensionen heißt ein hoher Wert: höheres Risiko. Beim Wirkprofil heißt ein hoher Wert: stärkerer typischer Effekt. Die Werte sind aktuell Mock-up-Scores.</p>
+        </article>
+        <article class="info-card">
+          <h2>Gefährlichkeitsdimensionen</h2>
+          <div class="definition-list">
+            <p><strong>Abhängigkeit:</strong> Risiko von Craving, Kontrollverlust, Toleranz und Entzug.</p>
+            <p><strong>Akuter körperlicher Schaden:</strong> unmittelbare körperliche Risiken kurz nach Konsum.</p>
+            <p><strong>Chronischer körperlicher Schaden:</strong> körperliche Langzeitfolgen bei wiederholtem Konsum.</p>
+            <p><strong>Psychisches Risiko:</strong> Risiko für Angst, Psychosen, Stimmung und Kognition.</p>
+            <p><strong>Überdosierungsrisiko:</strong> Risiko schwerer Intoxikation bis Lebensgefahr.</p>
+            <p><strong>Soziales Risiko:</strong> Risiko für Alltag, Beziehungen, Arbeit, Finanzen und Recht.</p>
+            <p><strong>Gesamtindex:</strong> Summe der sechs Gefahrenwerte; aktuell ungewichtet.</p>
+          </div>
+        </article>
+        <article class="info-card wide-info">
+          <h2>Wirkungsklassen</h2>
+          <p>Große Einordnung: Welche Art von Substanz ist es grundsätzlich?</p>
+          <div class="definition-list three">
+            <p><strong>Stimulans:</strong> erhöht Wachheit, Aktivierung und Antrieb.</p>
+            <p><strong>Depressivum/Sedativum:</strong> dämpft Aktivität, Angst oder Erregung.</p>
+            <p><strong>Empathogen:</strong> verstärkt Nähegefühl, Empathie und soziale Offenheit.</p>
+            <p><strong>Psychedelikum:</strong> verändert Wahrnehmung, Denken und Bedeutungserleben.</p>
+            <p><strong>Dissoziativum:</strong> verändert Körpergefühl, Raumgefühl und Selbstwahrnehmung.</p>
+            <p><strong>Opioid:</strong> wirkt schmerzstillend, sedierend und teils euphorisierend.</p>
+            <p><strong>Cannabinoid:</strong> wirkt über das Endocannabinoid-System; Effektprofil stark kontextabhängig.</p>
+          </div>
+        </article>
+        <article class="info-card wide-info">
+          <h2>Wirkprofil-Dimensionen</h2>
+          <p>Feineres Profil: Welche Effekte treten typischerweise auf und wie stark?</p>
+          <div class="definition-list three">
+            <p><strong>Stimulation:</strong> Aktivierung, Wachheit, Drive.</p>
+            <p><strong>Euphorie/Empathie:</strong> Wohlgefühl, Verbundenheit, soziale Offenheit.</p>
+            <p><strong>Wahrnehmungsveränderung:</strong> veränderte Sinneswahrnehmung, Denken, Bedeutungserleben.</p>
+            <p><strong>Sedierung:</strong> Beruhigung, Dämpfung, Müdigkeit.</p>
+            <p><strong>Dissoziation:</strong> Distanzierung von Körper, Umwelt oder Selbst.</p>
+            <p><strong>Analgesie:</strong> schmerzlindernder Effekt.</p>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hinweis: Diese Website enthält keine Konsumanleitung. Ratings sind Mock-up-Daten und müssen vor Veröffentlichung fachlich geprüft und belegt werden.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
