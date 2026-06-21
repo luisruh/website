@@ -316,7 +316,7 @@ function drawBarChart() {
   const chartEl = document.getElementById('barChart');
 
   // Mehr Höhe bei vielen Substanzen
-  chartEl.style.height = `${Math.max(420, 150 + rows.length * 42)}px`;
+  chartEl.style.height = `${Math.max(360, 120 + rows.length * 20)}px`;
 
   const yValues = rows.map(r => r.name).reverse();
 
