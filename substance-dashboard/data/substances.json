@@ -46,13 +46,15 @@
     "overdose_risk": 1,
     "social_risk": 1,
     "rating_confidence": 3,
-    "notes": "Beispieldatensatz; Ratings grob und nicht wissenschaftlich final.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 4,
     "effect_euphoria_empathy": 1,
     "effect_perception": 1,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "legal",
+    "origin_group": "natürlich"
   },
   {
     "substance_id": "nicotine",
@@ -97,13 +99,15 @@
     "overdose_risk": 2,
     "social_risk": 3,
     "rating_confidence": 3,
-    "notes": "Risiko stark abhängig von Konsumform.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 3,
     "effect_euphoria_empathy": 2,
     "effect_perception": 1,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "legal / altersbeschränkt",
+    "origin_group": "natürlich"
   },
   {
     "substance_id": "ethanol",
@@ -152,13 +156,15 @@
     "overdose_risk": 4,
     "social_risk": 5,
     "rating_confidence": 3,
-    "notes": "Gesellschaftlich verbreitet, aber mit hohem Schadenspotenzial.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 2,
     "effect_euphoria_empathy": 2,
     "effect_perception": 2,
     "effect_sedation": 4,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "legal / altersbeschränkt",
+    "origin_group": "natürlich"
   },
   {
     "substance_id": "thc",
@@ -213,13 +219,15 @@
     "overdose_risk": 1,
     "social_risk": 3,
     "rating_confidence": 3,
-    "notes": "Psychische Risiken kontext- und personenbezogen.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 1,
     "effect_euphoria_empathy": 2,
     "effect_perception": 3,
     "effect_sedation": 3,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "reguliert / kontrolliert",
+    "origin_group": "natürlich"
   },
   {
     "substance_id": "cocaine",
@@ -271,13 +279,15 @@
     "overdose_risk": 4,
     "social_risk": 5,
     "rating_confidence": 3,
-    "notes": "Hohes Abhängigkeits- und kardiovaskuläres Risiko.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 5,
     "effect_euphoria_empathy": 3,
     "effect_perception": 1,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "illegal",
+    "origin_group": "natürlich"
   },
   {
     "substance_id": "amphetamine",
@@ -327,13 +337,15 @@
     "overdose_risk": 3,
     "social_risk": 4,
     "rating_confidence": 3,
-    "notes": "Beispielhafte Einordnung; Rechtsstatus prüfen.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 5,
     "effect_euphoria_empathy": 3,
     "effect_perception": 1,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "verschreibungspflichtig / illegal ohne Rezept",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "mdma",
@@ -386,13 +398,15 @@
     "overdose_risk": 3,
     "social_risk": 3,
     "rating_confidence": 3,
-    "notes": "Risiken abhängig von Kontext, Reinheit und Mischkonsum.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 4,
     "effect_euphoria_empathy": 5,
     "effect_perception": 3,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "illegal",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "lsd",
@@ -441,13 +455,15 @@
     "overdose_risk": 1,
     "social_risk": 3,
     "rating_confidence": 3,
-    "notes": "Geringe körperliche Toxizität, psychische Risiken relevant.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 2,
     "effect_euphoria_empathy": 2,
     "effect_perception": 5,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "illegal",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "psilocybin",
@@ -495,13 +511,15 @@
     "overdose_risk": 1,
     "social_risk": 3,
     "rating_confidence": 3,
-    "notes": "Psychische Risiken bei Vulnerabilität und ungünstigem Kontext.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 1,
     "effect_euphoria_empathy": 2,
     "effect_perception": 5,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "kontrolliert / illegaler Gebrauch",
+    "origin_group": "natürlich"
   },
   {
     "substance_id": "ketamine",
@@ -549,13 +567,15 @@
     "overdose_risk": 3,
     "social_risk": 3,
     "rating_confidence": 3,
-    "notes": "Medizinische Nutzung vorhanden; Freizeitgebrauch separat bewerten.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 1,
     "effect_euphoria_empathy": 1,
     "effect_perception": 2,
     "effect_sedation": 2,
     "effect_dissociation": 5,
-    "effect_analgesia": 2
+    "effect_analgesia": 2,
+    "legal_status_de": "verschreibungspflichtig",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "morphine",
@@ -604,13 +624,15 @@
     "overdose_risk": 5,
     "social_risk": 5,
     "rating_confidence": 3,
-    "notes": "Medizinisch wichtig, hohes Abhängigkeits- und Überdosierungsrisiko.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 1,
     "effect_euphoria_empathy": 3,
     "effect_perception": 1,
     "effect_sedation": 5,
     "effect_dissociation": 1,
-    "effect_analgesia": 5
+    "effect_analgesia": 5,
+    "legal_status_de": "BtM / verschreibungspflichtig",
+    "origin_group": "natürlich"
   },
   {
     "substance_id": "diazepam",
@@ -659,13 +681,15 @@
     "overdose_risk": 4,
     "social_risk": 4,
     "rating_confidence": 3,
-    "notes": "Besonders riskant in Kombination mit anderen Depressiva.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 1,
     "effect_euphoria_empathy": 1,
     "effect_perception": 1,
     "effect_sedation": 5,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "verschreibungspflichtig",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "2cb",
@@ -704,13 +728,15 @@
     "overdose_risk": 2,
     "social_risk": 2,
     "rating_confidence": 2,
-    "notes": "Beispieldatensatz; Ratings grob und nicht wissenschaftlich final.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 2,
     "effect_euphoria_empathy": 2,
     "effect_perception": 4,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "illegal",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "tilidine",
@@ -748,13 +774,15 @@
     "overdose_risk": 3,
     "social_risk": 3,
     "rating_confidence": 3,
-    "notes": "Beispieldatensatz; Ratings grob und nicht wissenschaftlich final.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 1,
     "effect_euphoria_empathy": 2,
     "effect_perception": 1,
     "effect_sedation": 4,
     "effect_dissociation": 1,
-    "effect_analgesia": 5
+    "effect_analgesia": 5,
+    "legal_status_de": "BtM-pflichtig je nach Formulierung",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "nitrous_oxide",
@@ -791,13 +819,15 @@
     "overdose_risk": 2,
     "social_risk": 2,
     "rating_confidence": 2,
-    "notes": "Beispieldatensatz; Ratings grob und nicht wissenschaftlich final.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 1,
     "effect_euphoria_empathy": 2,
     "effect_perception": 2,
     "effect_sedation": 2,
     "effect_dissociation": 4,
-    "effect_analgesia": 2
+    "effect_analgesia": 2,
+    "legal_status_de": "rechtlich uneinheitlich",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "poppers",
@@ -816,10 +846,10 @@
     "source_organism": "",
     "source_organism_common": "",
     "source_part": "",
-    "primary_effect": "Depressivum",
+    "primary_effect": "Vasodilatator",
     "effect_tags": [
-      "Depressivum",
-      "Inhalativum"
+      "Vasodilatator",
+      "Depressivum"
     ],
     "chemical_tags": [
       "Alkylnitrit"
@@ -834,13 +864,15 @@
     "overdose_risk": 2,
     "social_risk": 1,
     "rating_confidence": 2,
-    "notes": "Beispieldatensatz; Ratings grob und nicht wissenschaftlich final.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 1,
     "effect_euphoria_empathy": 2,
     "effect_perception": 1,
     "effect_sedation": 2,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "rechtlich uneinheitlich",
+    "origin_group": "synthetisch"
   },
   {
     "substance_id": "mescaline",
@@ -877,12 +909,289 @@
     "overdose_risk": 2,
     "social_risk": 2,
     "rating_confidence": 2,
-    "notes": "Beispieldatensatz; Ratings grob und nicht wissenschaftlich final.",
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend.",
     "effect_stimulation": 2,
     "effect_euphoria_empathy": 2,
     "effect_perception": 5,
     "effect_sedation": 1,
     "effect_dissociation": 1,
-    "effect_analgesia": 1
+    "effect_analgesia": 1,
+    "legal_status_de": "illegal",
+    "origin_group": "natürlich"
+  },
+  {
+    "source_type": "n/a",
+    "source_organism": "",
+    "source_organism_common": "",
+    "source_part": "",
+    "origin_certainty": 2,
+    "rating_confidence": 2,
+    "substance_id": "heroin",
+    "name": "Heroin",
+    "common_names": [
+      "Diacetylmorphin",
+      "Diamorphin",
+      "H",
+      "Brown Sugar",
+      "Smack",
+      "Dope"
+    ],
+    "origin_type": "halbsynthetisch",
+    "origin_group": "synthetisch",
+    "geographic_origin": "Europa / international",
+    "primary_effect": "Opioid",
+    "effect_tags": [
+      "Opioid",
+      "Analgetikum",
+      "Sedativum"
+    ],
+    "chemical_tags": [
+      "Opioid",
+      "Morphinan"
+    ],
+    "legal_status_at": "illegal",
+    "legal_status_de": "illegal / BtM",
+    "medical_use": "eingeschränkt in wenigen Ländern",
+    "duration_category": "kurz bis mittel",
+    "addiction_risk": 5,
+    "acute_harm": 5,
+    "chronic_harm": 4,
+    "psychological_risk": 4,
+    "overdose_risk": 5,
+    "social_risk": 5,
+    "effect_stimulation": 1,
+    "effect_euphoria_empathy": 3,
+    "effect_perception": 1,
+    "effect_sedation": 5,
+    "effect_dissociation": 1,
+    "effect_analgesia": 5,
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend."
+  },
+  {
+    "source_type": "n/a",
+    "source_organism": "",
+    "source_organism_common": "",
+    "source_part": "",
+    "origin_certainty": 2,
+    "rating_confidence": 2,
+    "substance_id": "crack",
+    "name": "Crack",
+    "common_names": [
+      "Crack Cocaine",
+      "Freebase Cocaine",
+      "Rock",
+      "Base"
+    ],
+    "origin_type": "halbsynthetisch / hergestellt",
+    "origin_group": "synthetisch",
+    "geographic_origin": "international",
+    "primary_effect": "Stimulans",
+    "effect_tags": [
+      "Stimulans"
+    ],
+    "chemical_tags": [
+      "Tropanalkaloid",
+      "Kokain-Form"
+    ],
+    "legal_status_at": "illegal",
+    "legal_status_de": "illegal",
+    "medical_use": "nein",
+    "duration_category": "sehr kurz",
+    "addiction_risk": 5,
+    "acute_harm": 5,
+    "chronic_harm": 5,
+    "psychological_risk": 5,
+    "overdose_risk": 4,
+    "social_risk": 5,
+    "effect_stimulation": 5,
+    "effect_euphoria_empathy": 3,
+    "effect_perception": 1,
+    "effect_sedation": 1,
+    "effect_dissociation": 1,
+    "effect_analgesia": 1,
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend."
+  },
+  {
+    "source_type": "n/a",
+    "source_organism": "",
+    "source_organism_common": "",
+    "source_part": "",
+    "origin_certainty": 2,
+    "rating_confidence": 2,
+    "substance_id": "desomorphine",
+    "name": "Krokodil",
+    "common_names": [
+      "Desomorphin",
+      "Crocodile",
+      "Krokodil",
+      "Dihydrodesoxymorphin"
+    ],
+    "origin_type": "synthetisch",
+    "origin_group": "synthetisch",
+    "geographic_origin": "international",
+    "primary_effect": "Opioid",
+    "effect_tags": [
+      "Opioid",
+      "Analgetikum",
+      "Sedativum"
+    ],
+    "chemical_tags": [
+      "Opioid",
+      "Morphinan"
+    ],
+    "legal_status_at": "illegal",
+    "legal_status_de": "illegal / BtM",
+    "medical_use": "nein",
+    "duration_category": "kurz",
+    "addiction_risk": 5,
+    "acute_harm": 5,
+    "chronic_harm": 5,
+    "psychological_risk": 4,
+    "overdose_risk": 5,
+    "social_risk": 5,
+    "effect_stimulation": 1,
+    "effect_euphoria_empathy": 2,
+    "effect_perception": 1,
+    "effect_sedation": 5,
+    "effect_dissociation": 1,
+    "effect_analgesia": 5,
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend."
+  },
+  {
+    "source_type": "n/a",
+    "source_organism": "",
+    "source_organism_common": "",
+    "source_part": "",
+    "origin_certainty": 2,
+    "rating_confidence": 2,
+    "substance_id": "oxycodone",
+    "name": "Oxycodon",
+    "common_names": [
+      "Oxycodone",
+      "OxyContin",
+      "Oxy",
+      "Percocet"
+    ],
+    "origin_type": "halbsynthetisch",
+    "origin_group": "synthetisch",
+    "geographic_origin": "international",
+    "primary_effect": "Opioid",
+    "effect_tags": [
+      "Opioid",
+      "Analgetikum",
+      "Sedativum"
+    ],
+    "chemical_tags": [
+      "Opioid",
+      "Morphinan"
+    ],
+    "legal_status_at": "verschreibungspflichtig / kontrolliert",
+    "legal_status_de": "BtM / verschreibungspflichtig",
+    "medical_use": "ja",
+    "duration_category": "mittel",
+    "addiction_risk": 5,
+    "acute_harm": 4,
+    "chronic_harm": 4,
+    "psychological_risk": 3,
+    "overdose_risk": 5,
+    "social_risk": 4,
+    "effect_stimulation": 1,
+    "effect_euphoria_empathy": 2,
+    "effect_perception": 1,
+    "effect_sedation": 4,
+    "effect_dissociation": 1,
+    "effect_analgesia": 5,
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend."
+  },
+  {
+    "source_type": "n/a",
+    "source_organism": "",
+    "source_organism_common": "",
+    "source_part": "",
+    "origin_certainty": 2,
+    "rating_confidence": 2,
+    "substance_id": "methylphenidate",
+    "name": "Ritalin",
+    "common_names": [
+      "Methylphenidat",
+      "Methylphenidate",
+      "Ritalin",
+      "Concerta",
+      "Medikinet"
+    ],
+    "origin_type": "synthetisch",
+    "origin_group": "synthetisch",
+    "geographic_origin": "international",
+    "primary_effect": "Stimulans",
+    "effect_tags": [
+      "Stimulans"
+    ],
+    "chemical_tags": [
+      "Piperidin",
+      "Phenethylamin-ähnlich"
+    ],
+    "legal_status_at": "verschreibungspflichtig",
+    "legal_status_de": "BtM / verschreibungspflichtig",
+    "medical_use": "ja",
+    "duration_category": "kurz bis mittel",
+    "addiction_risk": 3,
+    "acute_harm": 2,
+    "chronic_harm": 2,
+    "psychological_risk": 3,
+    "overdose_risk": 2,
+    "social_risk": 2,
+    "effect_stimulation": 4,
+    "effect_euphoria_empathy": 1,
+    "effect_perception": 1,
+    "effect_sedation": 1,
+    "effect_dissociation": 1,
+    "effect_analgesia": 1,
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend."
+  },
+  {
+    "source_type": "n/a",
+    "source_organism": "",
+    "source_organism_common": "",
+    "source_part": "",
+    "origin_certainty": 2,
+    "rating_confidence": 2,
+    "substance_id": "alprazolam",
+    "name": "Xanax",
+    "common_names": [
+      "Alprazolam",
+      "Xanax",
+      "Benzos",
+      "Bars",
+      "Xannies"
+    ],
+    "origin_type": "synthetisch",
+    "origin_group": "synthetisch",
+    "geographic_origin": "international",
+    "primary_effect": "Sedativum",
+    "effect_tags": [
+      "Sedativum",
+      "Depressivum",
+      "Benzodiazepin"
+    ],
+    "chemical_tags": [
+      "Benzodiazepin"
+    ],
+    "legal_status_at": "verschreibungspflichtig",
+    "legal_status_de": "verschreibungspflichtig",
+    "medical_use": "ja",
+    "duration_category": "mittel",
+    "addiction_risk": 5,
+    "acute_harm": 3,
+    "chronic_harm": 4,
+    "psychological_risk": 3,
+    "overdose_risk": 4,
+    "social_risk": 4,
+    "effect_stimulation": 1,
+    "effect_euphoria_empathy": 1,
+    "effect_perception": 1,
+    "effect_sedation": 5,
+    "effect_dissociation": 1,
+    "effect_analgesia": 1,
+    "notes": "Ratings grob und nicht wissenschaftlich final; Quellenprüfung ausstehend."
   }
 ]

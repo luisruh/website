@@ -1,30 +1,23 @@
-# Substance Dashboard Mock-up v4
+# Substance Dashboard Mock-up
 
-Statischer GitHub-Pages-Mock-up ohne Backend.
+Statisches Dashboard für GitHub Pages.
 
-## Dateien
+## Struktur
 
-- `index.html` – Struktur und Tabs
-- `style.css` – Layout und Dark-Design
-- `app.js` – Filter, Charts und Netzwerke
-- `data/substances.json` – Mock-up-Daten
+- `index.html` – Seite
+- `style.css` – Design
+- `app.js` – Filter, Cards und Plotly-Charts
+- `data/substances.json` – Datenbasis
 
-## Neu in v4
+## Nutzung im bestehenden Website-Projekt
 
-- KPI-Kacheln bleiben entfernt
-- Mindest-Abhängigkeitsfilter bleibt entfernt
-- Kategorie-Netz ergänzt: Substanzen werden über Wirkung, Ursprung und chemische Tags verbunden
-- Dropdown im Ranking ist in Gefahrenkategorien und Wirkungstypen gruppiert
-- Definitionen für Gefahrenkategorien ergänzt
-- Aliasnamen weiter ausgebaut
-- Farben in Bar Chart reduziert
+Ordner `substance-dashboard` in dein bestehendes Website-Repository kopieren.
+Danach ist die Seite erreichbar unter:
 
-## Hinweis
+`https://deine-domain/substance-dashboard/`
 
-Die Daten und Ratings sind Platzhalter. Vor einer Veröffentlichung sollten Quellen, Methodik und rechtliche Begriffe sauber geprüft werden.
+Die Seite ist nicht verlinkt und enthält `noindex, nofollow`, ist aber nicht wirklich geschützt.
 
+## Datenhinweis
 
-## Version v6 notes
-- Definitionen liegen in eigenem Tab.
-- Wirkungsklasse und Effektdimension sind getrennt.
-- Wirkprofil-Map positioniert Substanzen nach mehreren Effektdimensionen und zeigt deren Stärke mit Mini-Balken.
+Die Beispiel-Ratings sind Platzhalter für den Mock-up. Für eine öffentliche Version sollten alle Ratings fachlich geprüft und mit Quellen versehen werden.
