@@ -400,16 +400,77 @@ function drawEffectHeatmap() { drawHeatmap('effectHeatmap', effectProfileFields,
 
 function drawHeatmap(id, fields, colorscale) {
   const y = filtered.map(d => d.name);
-  const x = fields.map(([,label]) => label);
+  const x = fields.map(([, label]) => label);
   const z = filtered.map(d => fields.map(([field]) => Number(d[field] || 0)));
+
   const trace = {
-    type: 'heatmap', x, y, z, zmin: 1, zmax: 5, colorscale,
-    colorbar: { orientation: 'h', x: 0.5, xanchor: 'center', y: 1.12, len: 0.45, thickness: 12 }
+    type: 'heatmap',
+    x,
+    y,
+    z,
+    zmin: 1,
+    zmax: 5,
+    colorscale,
+    hoverongaps: false,
+    colorbar: {
+      orientation: 'h',
+      x: 0.5,
+      xanchor: 'center',
+      y: 1.24,
+      len: 0.45,
+      thickness: 12,
+      tickmode: 'array',
+      tickvals: [1, 2, 3, 4, 5],
+      ticktext: ['1', '2', '3', '4', '5']
+    }
   };
+
   const layout = baseLayout();
-  layout.margin = { l: isMobile() ? 92 : 110, r: 14, t: 54, b: 56 };
-  layout.xaxis.tickangle = isMobile() ? -20 : 0;
+
+  layout.margin = {
+    l: isMobile() ? 92 : 110,
+    r: 14,
+    t: isMobile() ? 118 : 108,
+    b: isMobile() ? 92 : 78
+  };
+
+  // Untere X-Achse: alle Spaltenlabels erzwingen
+  layout.xaxis.side = 'bottom';
+  layout.xaxis.type = 'category';
+  layout.xaxis.categoryorder = 'array';
+  layout.xaxis.categoryarray = x;
+  layout.xaxis.tickmode = 'array';
+  layout.xaxis.tickvals = x;
+  layout.xaxis.ticktext = x;
+  layout.xaxis.tickangle = isMobile() ? -25 : -18;
+  layout.xaxis.tickfont = { size: isMobile() ? 10 : 12 };
+  layout.xaxis.automargin = true;
+
+  // // Obere Labels als Annotationen: zuverlässiger als xaxis2 bei Heatmaps
+  // layout.annotations = x.map(label => ({
+  //   x: label,
+  //   y: 1.045,
+  //   xref: 'x',
+  //   yref: 'paper',
+  //   text: label,
+  //   showarrow: false,
+  //   textangle: isMobile() ? -25 : -18,
+  //   xanchor: 'center',
+  //   yanchor: 'bottom',
+  //   font: {
+  //     color: '#f3f5fb',
+  //     size: isMobile() ? 10 : 12
+  //   }
+  // }));
+
+  layout.yaxis.type = 'category';
+  layout.yaxis.categoryorder = 'array';
+  layout.yaxis.categoryarray = y;
+  layout.yaxis.tickmode = 'array';
+  layout.yaxis.tickvals = y;
+  layout.yaxis.ticktext = y;
   layout.yaxis.automargin = true;
+
   Plotly.react(id, [trace], layout, plotConfig);
 }
 

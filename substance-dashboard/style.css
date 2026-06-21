@@ -78,7 +78,7 @@ input::placeholder { color: #8f98b7; }
 .chart { height: 340px; }
 .compact-chart { height: 360px; }
 .radar-chart { height: 320px; }
-.tall { height: 520px; }
+.tall { height: 600px; }
 .network { height: 300px; }
 .network.large { height: 440px; }
 .compare-box { width: 100%; }
@@ -188,7 +188,7 @@ footer p { font-size: 13px; }
   .metric-line { grid-template-columns: 106px minmax(0,1fr) 36px; gap: 8px; }
   .chart { height: 320px; }
   .radar-chart { height: 280px; }
-  .tall { height: 460px; }
+  .tall { height: 540px; }
   .network { height: 280px; }
   .network.large { height: 380px; }
 }
