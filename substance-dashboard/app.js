@@ -314,14 +314,11 @@ function drawBarChart() {
     .sort((a, b) => b.value - a.value);
 
   const chartEl = document.getElementById('barChart');
-
-  // Mehr Höhe bei vielen Substanzen
-  chartEl.style.height = `${Math.max(360, 120 + rows.length * 20)}px`;
+  const chartHeight = Math.max(340, 110 + rows.length * 32);
+  chartEl.style.height = `${chartHeight}px`;
 
   const yValues = rows.map(r => r.name).reverse();
-
-  // Sichtbarer Abstand zwischen Label und Balken
-  const labelGap = '\u00A0\u00A0\u00A0\u00A0';
+  const labelGap = '      ';
 
   const trace = {
     type: 'bar',
@@ -336,26 +333,15 @@ function drawBarChart() {
   };
 
   const layout = baseLayout();
-
-  layout.margin = {
-    l: isMobile() ? 150 : 180,
-    r: 24,
-    t: 6,
-    b: 42
-  };
-
+  layout.height = chartHeight;
+  layout.margin = { l: isMobile() ? 150 : 180, r: 24, t: 6, b: 42 };
   layout.xaxis.title = label;
-
-  // Wichtig: keine xaxis.domain-Verschiebung mehr
   delete layout.xaxis.domain;
-
   layout.yaxis.automargin = false;
   layout.yaxis.tickmode = 'array';
   layout.yaxis.tickvals = yValues;
   layout.yaxis.ticktext = yValues.map(name => name + labelGap);
-  layout.yaxis.tickfont = {
-    size: isMobile() ? 13 : 15
-  };
+  layout.yaxis.tickfont = { size: isMobile() ? 13 : 15 };
 
   Plotly.react('barChart', [trace], layout, plotConfig);
 }
@@ -416,8 +402,8 @@ function drawHeatmap(id, fields, colorscale) {
       orientation: 'h',
       x: 0.5,
       xanchor: 'center',
-      y: 1.24,
-      len: 0.45,
+      y: 1.08,
+      len: 0.42,
       thickness: 12,
       tickmode: 'array',
       tickvals: [1, 2, 3, 4, 5],
@@ -426,15 +412,14 @@ function drawHeatmap(id, fields, colorscale) {
   };
 
   const layout = baseLayout();
-
   layout.margin = {
     l: isMobile() ? 92 : 110,
     r: 14,
-    t: isMobile() ? 118 : 108,
-    b: isMobile() ? 92 : 78
+    t: isMobile() ? 68 : 62,
+    b: isMobile() ? 100 : 86
   };
 
-  // Untere X-Achse: alle Spaltenlabels erzwingen
+  // Nur untere X-Achse. Alle Spaltenbezeichnungen werden erzwungen.
   layout.xaxis.side = 'bottom';
   layout.xaxis.type = 'category';
   layout.xaxis.categoryorder = 'array';
@@ -446,23 +431,6 @@ function drawHeatmap(id, fields, colorscale) {
   layout.xaxis.tickfont = { size: isMobile() ? 10 : 12 };
   layout.xaxis.automargin = true;
 
-  // // Obere Labels als Annotationen: zuverlässiger als xaxis2 bei Heatmaps
-  // layout.annotations = x.map(label => ({
-  //   x: label,
-  //   y: 1.045,
-  //   xref: 'x',
-  //   yref: 'paper',
-  //   text: label,
-  //   showarrow: false,
-  //   textangle: isMobile() ? -25 : -18,
-  //   xanchor: 'center',
-  //   yanchor: 'bottom',
-  //   font: {
-  //     color: '#f3f5fb',
-  //     size: isMobile() ? 10 : 12
-  //   }
-  // }));
-
   layout.yaxis.type = 'category';
   layout.yaxis.categoryorder = 'array';
   layout.yaxis.categoryarray = y;
@@ -470,6 +438,9 @@ function drawHeatmap(id, fields, colorscale) {
   layout.yaxis.tickvals = y;
   layout.yaxis.ticktext = y;
   layout.yaxis.automargin = true;
+
+  delete layout.xaxis2;
+  delete layout.annotations;
 
   Plotly.react(id, [trace], layout, plotConfig);
 }
